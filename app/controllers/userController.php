@@ -10,7 +10,7 @@ class userController extends \BaseController {
 		$data["base_url"] = URL::to("/")."/";
 		$data["current_url"] = Request::url()."/";
 		$data["current_page"] = "profile";
-		$data["user_side"] = "profile";
+		$data["user_tab"] = "user_profile";
 		
 		return View::make("app.pages.user", $data);
 	}
