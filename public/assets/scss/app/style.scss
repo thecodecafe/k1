@@ -170,4 +170,15 @@
 			}
 		}
 	}
+
+	&.user{
+
+		display: none;
+
+		.text-to-bottom{
+			 position: absolute; 
+			 bottom: 0; 
+			 left: 0; 
+		}
+	}
 }

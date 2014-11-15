@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="{{$base_url}}assets/foundation-5.4.0/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="{{$base_url}}assets/foundation-5.4.0/css/foundation.css">
 	<link rel="stylesheet" type="text/css" href="{{$base_url}}assets/font-awesome-4.2.0/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="{{$base_url}}assets/scss/site/style.css">
+	<link rel="stylesheet" type="text/css" href="{{$base_url}}assets/scss/app/style.css">
 	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> -->
 </head>
 
@@ -109,7 +109,7 @@
 <script type="text/javascript" src="{{$base_url}}assets/foundation-5.4.0/js/vendor/fastclick.js"></script>
 <script type="text/javascript" src="{{$base_url}}assets/foundation-5.4.0/js/vendor/jquery.cookie.js"></script>
 <script type="text/javascript" src="{{$base_url}}assets/foundation-5.4.0/js/vendor/modernizr.js"></script>
-<script type="text/javascript" src="{{$base_url}}assets/js/site/default.js"></script>
+<script type="text/javascript" src="{{$base_url}}assets/js/app/default.js"></script>
 
 <!-- Foundation dot JS -->
 <script type="text/javascript" src="{{$base_url}}assets/foundation-5.4.0/js/foundation/foundation.js"></script>
