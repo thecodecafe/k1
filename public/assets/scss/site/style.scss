@@ -1,0 +1,173 @@
+@import "setup.scss";
+
+.site-container{
+	position: relative;
+	float: left;
+	width: 100%;
+	
+	.footer{
+		position: relative;
+		float: left;
+		width: 100%;
+		background-color:$darkgrey;
+		color:darken($grey, 50%);
+
+		.nav{
+			background-color: darken($darkgrey, 5%);
+
+			a{
+				color:darken($grey, 50%);
+
+				&:hover{
+					color:darken($grey, 20%);
+				}
+			}
+
+			.large{
+
+				a{
+					padding: 0px 20px;
+				}
+
+			}
+
+			.small{
+
+				a{
+					width: 100%;
+				}
+
+			}
+
+			
+		}
+	}
+
+	&.index{
+
+		.home-header{
+			position: relative;
+			float: left;
+			width:100%;
+
+			.background-image{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width:100%;
+				height: 100%;
+				background-size: cover;
+
+				&.large{
+					background: url("../../img/site/home-hero-header.jpg") center center;
+				}
+
+				&.small{
+					background: url("../../img/site/home-hero-header-mobile.jpg") center center;
+				}
+			}
+
+			.signup-form{
+				position: relative;
+				float: left;
+				width: 100%;
+				padding: 20px 25px;
+				@extend %boxsizing;
+				background-color: #fff;
+				@include borderradius(10px);
+
+				h4.title{color:darken($grey, 40%);}
+			}
+		}
+
+		.testimonial-carousel{
+			position: relative;
+			float: left;
+			width: 100%;
+			overflow-x: hidden;
+			overflow-y: visible;
+
+			.tc-inner{
+				position: relative;
+				float: left;
+				width: 500%;
+
+				.tc-content{
+					position: relative;
+					float: left;
+					width: 20%;
+
+					img{
+						border:solid 8px darken($grey, 1%);
+					}
+				}
+			}
+
+			.tc-nav{
+				position: relative;
+				float: left;
+				width: 100%;
+
+				.tcn-bullet{
+					display: inline-block;
+					vertical-align: top;
+					zoom: 1; /* Fix for IE7 */
+					*display: inline; /* Fix for IE7 */
+					width: 20px;
+					height: 20px;
+					line-height: 20px;
+					color: $grey;
+
+					&.active{
+						color: darken($grey, 10%);
+					}
+				}
+			}
+		}
+
+	}
+
+	&.wwd{
+
+		.hero-header{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			@extend %boxsizing;
+			z-index: 10;
+			padding: 0px 20px;
+		}
+	}
+
+	&.case-study{
+
+		.case-study-hero-header{
+			position: relative;
+			float: left;
+			width: 100%;
+
+			.bg{
+				position: relative;
+				float: left;
+				width: 100%;
+			}
+
+			.title{
+				position: absolute;
+				float: left;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				padding: 40px 40px;
+				@extend %boxsizing;
+
+				h4{
+					position: relative;
+					z-index: 10;
+				}				
+			}
+		}
+	}
+}
