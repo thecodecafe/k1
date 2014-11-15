@@ -1,26 +1,30 @@
 <?php
+	use Cartalyst\Sentry\Users\Eloquent\User as SentryModel;
 
-use Illuminate\Auth\UserTrait;
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Auth\Reminders\RemindableInterface;
+	class User extends SentryModel
+	{
+		public function profile()
+	    {
+	    	return $this->hasOne('Profile');
+	    }
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+	    public function school()
+	    {
+	    	return $this->belongsTo('School','school_id');
+	    }
 
-	use UserTrait, RemindableTrait;
+	    public function skills()
+	    {
+	    	return $this->hasMany('Skill');
+	    }
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-	protected $table = 'users';
+	    public function qualifications()
+	    {
+	    	return $this->hasMany('Qualification');
+	    }
 
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $hidden = array('password', 'remember_token');
-
-}
+	    public function employment()
+	    {
+	    	return $this->hasMany('Employment');
+	    }
+	}
