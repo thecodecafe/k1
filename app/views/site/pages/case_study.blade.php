@@ -1,4 +1,9 @@
-@extends("site.layout.master")
+@section("page_title") Case Study | Knowledge First... @stop
+
+@section('menu_style')  @stop
+
+@section('current_page') case-study @stop
+
 @section("content")
 
 <div class="section dark">

@@ -1,4 +1,9 @@
-@extends("site.layout.master")
+@section('title') Knowledge First... @stop
+
+@section('menu_style') white @stop
+
+@section('current_page') index @stop
+
 @section("content")
 
 <div class="blue less-padding section home-header">

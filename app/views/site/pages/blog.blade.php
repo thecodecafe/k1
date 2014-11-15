@@ -1,4 +1,9 @@
-@extends("site.layout.master")
+@section("page_title") Blog | Knowledge First... @stop
+
+@section('menu_style')  @stop
+
+@section('current_page') blog @stop
+
 @section("content")
 
 <div class="dark section side-padded underlined">

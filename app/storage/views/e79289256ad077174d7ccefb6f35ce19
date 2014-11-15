@@ -1,3 +1,9 @@
+<?php $__env->startSection("page_title"); ?> Blog | Knowledge First... <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('menu_style'); ?>  <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('current_page'); ?> blog <?php $__env->stopSection(); ?>
+
 <?php $__env->startSection("content"); ?>
 
 <div class="dark section side-padded underlined">
@@ -70,4 +76,3 @@
 </div>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make("site.layout.master", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,3 +1,8 @@
+<?php $__env->startSection('title'); ?> Knowledge First.. <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('menu_style'); ?> white <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('current_page'); ?> index <?php $__env->stopSection(); ?>
 <?php $__env->startSection("content"); ?>
 
 <div class="blue less-padding section home-header">
@@ -245,4 +250,3 @@
 
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make("site.layout.master", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

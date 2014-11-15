@@ -55,9 +55,9 @@
 
 
 			<p class="text-center xs-text">
-				Already have a account? <a href="<?php echo $base_url; ?>login">Login</a>
+				Already have a account? <a href="<?php echo URL::to('login'); ?>">Login</a>
 
-				| Forgot password? <a href="<?php echo $base_url; ?>reset">Reset</a>
+				| Forgot password? <a href="#">Reset</a>
 			</p>			
 
 		</div>

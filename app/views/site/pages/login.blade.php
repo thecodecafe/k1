@@ -1,4 +1,9 @@
-@extends("site.layout.master")
+@section("page_title") Login | Knowledge First... @stop
+
+@section('menu_style')  @stop
+
+@section('current_page') login @stop
+
 @section("content")
 
 <div class="section">
@@ -28,7 +33,7 @@
 			{{Form::close()}}
 
 			<p class="text-center xs-text">
-				Don't have a account? <a href="{{$base_url}}signup">Sign Up</a>
+				Don't have a account? <a href="{{URL::to('signup')}}">Sign Up</a>
 			</p>			
 
 		</div>

@@ -1,7 +1,13 @@
+<?php $__env->startSection("page_title"); ?> Blog | Knowledge First... <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('menu_style'); ?>  <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('current_page'); ?> wwd <?php $__env->stopSection(); ?>
+
 <?php $__env->startSection("content"); ?>
 
 <div class="section no-padding fly-in-plugin">
-	<img data-interchange="[<?php echo $base_url; ?>assets/site/img/wwd-hero-image.jpg, (only screen and (min-width: 641px))], [<?php echo $base_url; ?>assets/site/img/wwd-hero-image-small.jpg, (only screen and (max-width: 640px))]" class="fullwidthimage">
+	<img data-interchange="[<?php echo URL::to('/').'/'; ?>assets/img/site/wwd-hero-image.jpg, (only screen and (min-width: 641px))], [{{$URL::to('/').'/'}assets/img/site/wwd-hero-image-small.jpg, (only screen and (max-width: 640px))]" class="fullwidthimage">
 
 	<div class="hero-header robotoslab">
 		<h4 class="xxl-text white-text marginbottom1 margintop8 text-center show-for-medium-up bold">Lorem ipsum dolor</h4>
@@ -107,4 +113,3 @@
 </div>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make("site.layout.master", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

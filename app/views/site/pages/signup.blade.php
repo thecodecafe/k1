@@ -52,9 +52,9 @@
 			{{Form::close()}}
 
 			<p class="text-center xs-text">
-				Already have a account? <a href="{{$base_url}}login">Login</a>
+				Already have a account? <a href="{{URL::to('login')}}">Login</a>
 
-				| Forgot password? <a href="{{$base_url}}reset">Reset</a>
+				| Forgot password? <a href="#">Reset</a>
 			</p>			
 
 		</div>

@@ -1,3 +1,9 @@
+<?php $__env->startSection("page_title"); ?> Login | Knowledge First... <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('menu_style'); ?>  <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('current_page'); ?> login <?php $__env->stopSection(); ?>
+
 <?php $__env->startSection("content"); ?>
 
 <div class="section">
@@ -30,7 +36,7 @@
 
 
 			<p class="text-center xs-text">
-				Don't have a account? <a href="<?php echo $base_url; ?>signup">Sign Up</a>
+				Don't have a account? <a href="<?php echo URL::to('signup'); ?>">Sign Up</a>
 			</p>			
 
 		</div>
@@ -40,4 +46,3 @@
 </div>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make("site.layout.master", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
