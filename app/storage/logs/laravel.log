@@ -5085,3 +5085,17 @@ Stack trace:
 #9 /opt/lampp/htdocs/k1/bootstrap/compiled.php(657): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
 #10 /opt/lampp/htdocs/k1/public/index.php(49): Illuminate\Foundation\Application->run()
 #11 {main} [] []
+[2014-11-15 15:11:49] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\k1_shared\bootstrap\compiled.php:5681
+Stack trace:
+#0 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(5005): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(4993): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(4985): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(715): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(696): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(7745): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(8352): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(8299): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(10962): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\k1_shared\bootstrap\compiled.php(657): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\k1_shared\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
