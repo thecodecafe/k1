@@ -12,14 +12,14 @@
 	{{ HTML::style('assets/foundation-5.4.0/css/normalize.css') }}
 	{{ HTML::style('assets/foundation-5.4.0/css/foundation.css') }}
 	{{ HTML::style('assets/font-awesome-4.2.0/css/font-awesome.css') }}
-	{{ HTML::style('assets/scss/app/style.css') }}
+	{{ HTML::style('assets/css/app/style.css') }}
 </head>
 
 <body>
 	<div class="site-container @yield('current_page')">
 
-		@include("site._partials.menubar")
-		@include("site._partials.mobile_menubar")
+		@include("_partials.app.menubar")
+		@include("_partials.app.mobile_menubar")
 
 		@yield("content")
 

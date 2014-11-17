@@ -2,13 +2,14 @@
 
 class userController extends \BaseController {
 
-	public $layout = "app.layout.master";
+	public $layout = "layout.app.master";
 
 	
 	public function index($user_id)
 	{	
-		$data['user_tab'] = "user_profile";
-		$this->layout->content = View::make("app.pages.user", $data);
+		$data['user_tab'] = "profile";
+		$data['menu_style'] = " ";
+		$this->layout->content = View::make("pages.app.profile", $data);
 	}
 
 }

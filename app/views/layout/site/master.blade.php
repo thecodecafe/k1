@@ -18,8 +18,8 @@
 <body>
 	<div class="site-container @yield('current_page')">
 
-		@include("site._partials.menubar")
-		@include("site._partials.mobile_menubar")
+		@include("_partials.site.menubar")
+		@include("_partials.site.mobile_menubar")
 
 		@yield("content")
 

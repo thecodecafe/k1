@@ -1,6 +1,6 @@
 @section('title') Knowledge First... @stop
 
-@section('menu_style') white @stop
+@section('menu_style') transparent @stop
 
 @section('current_page') index @stop
 
@@ -12,19 +12,19 @@
 
 	<div class="row">
 		
-		<div class="large-12 medium-12 small-12 columns margintop4 marginbottom8">
+		<div class="large-12 medium-12 small-12 columns margintop10 marginbottom8">
 		
 			<div class="row fly-in-plugin">
 
-				<div class="large-6 medium-6 small-12 columns margintop4">
+				<div class="large-6 medium-6 small-12 columns margintop10">
 
 					<h4 class="white-text xl-text robotoslab bold fft">
-						Welcome to Nigerias number professional network.
+						Welcome to Nigerias number one professional network.
 					</h4>
 
 				</div>
 
-				<div class="large-6 medium-6 small-12 columns margintop4">
+				<div class="large-6 medium-6 small-12 columns margintop6">
 					<div class="signup-form ffr">
 						<h4 class="title m-text marginbottom2">Sign Up For Free</h4>
 						{{Form::open(["url"=>"#", "method"=>"post"])}}
@@ -139,7 +139,7 @@
 	<div class="row ffr">
 		<!-- Individuals -->
 		<div class="large-10 medium-10 small-12 large-offset-1 medium-offset-1 columns margintop4">
-			<img class="fullwidthimage" src="{{$base_url}}assets/site/img/browser.png">
+			<img class="fullwidthimage" src="{{URL::to('/')}}assets/site/img/browser.png">
 		</div>
 	</div>
 
@@ -236,7 +236,7 @@
 
 			</div>
 
-			<!-- <img class="fullwidthimage" src="{{$base_url}}assets/site/img/corporate-logos.png"> -->
+			<!-- <img class="fullwidthimage" src="{{URL::to('/')}}assets/site/img/corporate-logos.png"> -->
 		
 		</div>
 
