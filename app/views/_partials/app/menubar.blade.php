@@ -21,14 +21,10 @@
 		
 		<!-- This part of the menu appears on the right of the menu -->
 		<ul class="menu right">
-			<li class="">
-				<a href="{{URL::to('contact')}}">Contact</a>
-			</li>
-			<li class="">
-				<a href="{{URL::to('login')}}">Login</a>
-			</li>
-			<li class="round-outline-link">
-				<a href="{{URL::to('signup')}}"><span>Sign up</span></a>
+			<li class="user-menu">
+				<a href="javascript:;">
+					<img src="{{URL::to("/")}}/assets/img/app/test/profile-pic.jpg" class="round"> <i class="fa fa-angle-down"></i>
+				</a>
 			</li>
 		</ul>
 

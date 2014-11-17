@@ -1,8 +1,6 @@
-var k1site = new function(){
+var k1app = new function(){
 
-	var homesliderindex = 1,
-		htcindex = 1,
-		fie_timer = 0;
+	var fie_timer = 0;
 
 	function flyineffect() {
 
@@ -135,8 +133,29 @@ var k1site = new function(){
 
 		mobile_menu_toggle();
 
+		profile_edit_options_toggle();
+
 
 	};
+
+	var profile_edit_options_toggle = function()
+	{
+		if ($("div").hasClass('user') && $('div').hasClass('edit-profile-options')) {
+
+			$('.togglebutton').click(function(event) {
+				
+				if ($(".edit-profile-options .edit-option").is(":visible")) {
+
+					$(".edit-profile-options .edit-option").hide('fast');
+				}
+				else{
+
+					$(".edit-profile-options .edit-option").show('fast');
+
+				}
+			});
+		};
+	}
 
 	var mobile_menu_toggle = function(){
 
@@ -164,155 +183,12 @@ var k1site = new function(){
 			event.preventDefault();
 
 		});
-	}
+	};
 
-	// Home header slider
-	function homeslider()
-	{
-		if ($("div").hasClass('index') && $("div").hasClass('home-slider')) 
-		{
-			var slideinterval,
-				homeslidercounter = 1;
-
-			$(".home-slider .sc-list li").each(function() {
-
-				$(this).addClass('hsn'+homeslidercounter);
-				
-				homeslidercounter++;
-			});
-
-			slideinterval = setInterval(homeslideraction, 8000);
-		};
-	}
-
-	// Home header slider slide action
-	function homeslideraction(){
-
-		var current_top;
-
-		if (homesliderindex == $(".home-slider .sc-list li").size())
-			{
-				homesliderindex = 1;
-			}
-		else{
-
-			homesliderindex++;
-		}
-
-		current_to = $(".hsn"+homesliderindex).position().top;
-
-		$(".home-slider .sc-list").stop().animate({
-			top: -current_to
-		}, 800);
-
-	}
-
-	// Home testimonial carousel
-	function hometestimonialcarousel()
-	{
-		if ($("div").hasClass('index') && $("div").hasClass('testimonial-carousel')) 
-		{
-			var carouselinterval,
-				homecarouselcounter = 1;
-
-			$(".testimonial-carousel .tc-inner .tc-content").each(function() {
-
-				$(this).addClass('htc'+homecarouselcounter);
-
-				if (homecarouselcounter == 1) {
-
-					$(".testimonial-carousel .tc-nav").append('<a href="#" class="active tcn-bullet htcnb'+homecarouselcounter+'" data-index="'+homecarouselcounter+'"><i class="fa fa-circle"></i></a>');
-
-				}
-				else{
-
-					$(".testimonial-carousel .tc-nav").append('<a href="#" class="tcn-bullet htcnb'+homecarouselcounter+'" data-index="'+homecarouselcounter+'"><i class="fa fa-circle"></i></a>');
-				}
-				
-				homecarouselcounter++;
-			});
-
-			htcaction();
-		};
-	}
-
-	// Home testimonial carousel slide action
-	function htcaction(){
-
-		var current_left;
-
-		$(".tc-nav .tcn-bullet").on("click", function(event){
-
-			htcindex = $(this).attr("data-index");
-
-			current_left = $(".htc"+htcindex).position().left;
-
-			$(".tc-nav .tcn-bullet").removeClass('active');
-
-			$(".htcnb"+htcindex).addClass('active');
-
-			$(".testimonial-carousel .tc-inner").stop().animate({
-				left: -current_left
-			}, 400);
-
-			event.preventDefault();
-		});
-
-		/*$(".testimonial-carousel").on("swipeleft", function(event){
-
-			if (htcindex == $(".testimonial-carousel .tc-inner .tc-content").size()) {
-
-				//do nothing
-			}
-			else{
-
-				htcindex++;
-
-			}
-
-			current_left = $(".htc"+htcindex).position().left;
-
-			$(".tc-nav .tcn-bullet").removeClass('active');
-
-			$(".htcnb"+htcindex).addClass('active');
-
-			$(".testimonial-carousel .tc-inner").stop().animate({
-				left: -current_left
-			}, 400);
-
-		});
-
-		$(".testimonial-carousel").on("swiperight", function(event){
-
-			if (htcindex < 2) {
-
-				htcindex = 1;
-			}
-			else{
-
-				htcindex--;
-
-			}
-
-			current_left = $(".htc"+htcindex).position().left;
-
-			$(".tc-nav .tcn-bullet").removeClass('active');
-
-			$(".htcnb"+htcindex).addClass('active');
-
-			$(".testimonial-carousel .tc-inner").stop().animate({
-				left: -current_left
-			}, 400);
-
-		});*/
-
-	}
 
 	this.init = function(){
 
 		autoloads();
-		homeslider();
-		hometestimonialcarousel();
 
 	};
 
@@ -320,6 +196,6 @@ var k1site = new function(){
 
 $(function(){
 
-	k1site.init();
+	k1app.init();
 
 });

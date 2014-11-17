@@ -7,6 +7,7 @@ $darkblue: darken($blue, 5%);
 $grey:#eee;
 $darkgrey:#333;
 $deadblue:#2d3649;
+$green:#7fb423;
 
 body{
 	&.f-topbar-fixed{
@@ -75,6 +76,7 @@ p, h1, h2, h3, h4, h5, h6{
 	.m-text{font-size: 1.500em;}
 	.s-text{font-size: 1.125em}
 	.xs-text{font-size: 0.875em;}
+	.xxs-text{font-size: 0.688em;}
 
 	.blue-text{color: darken($blue, 5%);}
 
@@ -83,6 +85,8 @@ p, h1, h2, h3, h4, h5, h6{
 	.light-text{color: $grey;}
 
 	.grey-text{color: darken($grey, 40%);}
+
+	.black-text{ color:#000;}
 
 	img{
 		&.round{
@@ -125,6 +129,13 @@ p, h1, h2, h3, h4, h5, h6{
 			background-color: $deadblue;
 		}
 	}
+
+	button.white, .button.white {
+    background-color: #fff;
+    border-color: $grey;
+    color: #666; }
+    button.white:hover, button.white:focus, .button.white:hover, .button.white:focus {
+    background-color: darken(#fff, 5%); }
 
 //style for fly in javascript effect
 
@@ -241,6 +252,36 @@ p, h1, h2, h3, h4, h5, h6{
 	    -ms-border-radius: $size;
 	     -o-border-radius: $size;
 	        border-radius: $size;
+}
+
+@mixin borderradius2($bl, $br, $tl, $tr) {
+
+	border-bottom-left-radius: $bl;
+	border-bottom-right-radius: $br;
+	border-top-left-radius: $tl;
+	border-top-right-radius: $tr;
+	// Webkit browsers 
+	-webkit-border-bottom-left-radius: $bl;
+	-webkit-border-bottom-right-radius: $br;
+	-webkit-border-top-left-radius: $tl;
+	-webkit-border-top-right-radius: $tr;
+	// Mozilla firefox
+	-moz-border-bottom-left-radius: $bl;
+	-moz-border-bottom-right-radius: $br;
+	-moz-border-top-left-radius: $tl;
+	-moz-border-top-right-radius: $tr;
+	// Internes Explorer 
+	-ms-border-bottom-left-radius: $bl;
+	-ms-border-bottom-right-radius: $br;
+	-ms-border-top-left-radius: $tl;
+	-ms-border-top-right-radius: $tr;
+	//Opera browser
+	-o-border-bottom-left-radius: $bl;
+	-o-border-bottom-right-radius: $br;
+	-o-border-top-left-radius: $tl;
+	-o-border-top-right-radius: $tr;
+
+	
 }
 
 @mixin boxshadow($x:0, $y:0, $offset:0px, $blur:0px, $color:#fff){
@@ -421,6 +462,33 @@ p, h1, h2, h3, h4, h5, h6{
 						line-height: 60px;
 						height: 60px;
 						font-size: 14px;
+
+						&.user-menu{
+							>a{
+								padding: 0px 8px;
+								display: inline-block;
+								vertical-align: top;
+								zoom: 1; /* Fix for IE7 */
+								*display: inline; /* Fix for IE7 */
+								@include borderradius(3px); 
+								height: 40px;
+								margin-top: 10px;
+								line-height: 40px;
+								color:#fff;
+								font-weight: bold;
+								font-size: 16px;
+
+								img{
+									display: inline-block;
+									vertical-align: top;
+									zoom: 1; /* Fix for IE7 */
+									*display: inline; /* Fix for IE7 */
+									height: 40px;
+									width: 40px;
+								}
+							}
+							
+						}
 
 						&.round-outline-link{
 							a{

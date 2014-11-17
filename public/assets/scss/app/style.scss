@@ -1,4 +1,4 @@
-@import "setup.scss";
+@import "../setup.scss";
 
 .site-container{
 	position: relative;
@@ -43,138 +43,10 @@
 		}
 	}
 
-	&.index{
-
-		.home-header{
-			position: relative;
-			float: left;
-			width:100%;
-
-			.background-image{
-				position: absolute;
-				left: 0px;
-				top: 0px;
-				width:100%;
-				height: 100%;
-				background-size: cover;
-
-				&.large{
-					background: url("../../img/site/home-hero-header.jpg") center center;
-				}
-
-				&.small{
-					background: url("../../img/site/home-hero-header-mobile.jpg") center center;
-				}
-			}
-
-			.signup-form{
-				position: relative;
-				float: left;
-				width: 100%;
-				padding: 20px 25px;
-				@extend %boxsizing;
-				background-color: #fff;
-				@include borderradius(10px);
-
-				h4.title{color:darken($grey, 40%);}
-			}
-		}
-
-		.testimonial-carousel{
-			position: relative;
-			float: left;
-			width: 100%;
-			overflow-x: hidden;
-			overflow-y: visible;
-
-			.tc-inner{
-				position: relative;
-				float: left;
-				width: 500%;
-
-				.tc-content{
-					position: relative;
-					float: left;
-					width: 20%;
-
-					img{
-						border:solid 8px darken($grey, 1%);
-					}
-				}
-			}
-
-			.tc-nav{
-				position: relative;
-				float: left;
-				width: 100%;
-
-				.tcn-bullet{
-					display: inline-block;
-					vertical-align: top;
-					zoom: 1; /* Fix for IE7 */
-					*display: inline; /* Fix for IE7 */
-					width: 20px;
-					height: 20px;
-					line-height: 20px;
-					color: $grey;
-
-					&.active{
-						color: darken($grey, 10%);
-					}
-				}
-			}
-		}
-
-	}
-
-	&.wwd{
-
-		.hero-header{
-			position: absolute;
-			left: 0px;
-			top: 0px;
-			width: 100%;
-			height: 100%;
-			@extend %boxsizing;
-			z-index: 10;
-			padding: 0px 20px;
-		}
-	}
-
-	&.case-study{
-
-		.case-study-hero-header{
-			position: relative;
-			float: left;
-			width: 100%;
-
-			.bg{
-				position: relative;
-				float: left;
-				width: 100%;
-			}
-
-			.title{
-				position: absolute;
-				float: left;
-				left: 0px;
-				top: 0px;
-				width: 100%;
-				padding: 40px 40px;
-				@extend %boxsizing;
-
-				h4{
-					position: relative;
-					z-index: 10;
-				}				
-			}
-		}
-	}
-
 	&.user{
 
 		.profile-bg{
-			
+
 			.profile-bg-olay{
 				position: absolute;
 				float: left;
@@ -182,26 +54,37 @@
 				height: 100%;
 				top: 0px;
 				background-color: #000;
-				opacity: 0.4;
+				opacity: 0.6;
 			}
 
 		}
 
-		.edit-button-container{
+		.edit-profile-options{
 			position: absolute;
-			float: left;
-			width: 100%;
-			height: 1px;
-			top: 0px;
+			left: 20px;
+			top: 20px;
 			z-index:10;
-			text-align: center; 
 
-			button{
-				display: inline-block;
-				vertical-align: top;
-				zoom: 1; /* Fix for IE7 */
-				*display: inline; /* Fix for IE7 */
-				top: 10px;
+			.edit-option{
+				position: absolute;
+				top: 100%;
+				float: left;
+				width: 128px;
+				background-color: #fff;
+				margin: 0px;
+				list-style: none;
+				overflow: hidden;
+				display: none;
+				@include borderradius2(1px, 1px, 0px, 1px);
+
+				li{
+					position: relative;
+					float: left;
+					width: 100%;
+					padding: 5px 8px;
+					font-weight: bold;
+					@extend %boxsizing;
+				}
 			}
 		}
 
@@ -213,18 +96,18 @@
 			li{
 				position: relative;
 				float: left;
-				border-bottom: solid 5px $blue; 
+				border-top: solid 5px darken($blue, 5%); 
 				@include transitions(all, 0.5s, ease);	
 
 				&:hover{
 
-					border-bottom: solid 5px $green; 
+					border-top: solid 5px $green; 
 
 				}
 
 				&.active{
 
-					border-bottom: solid 5px $green; 
+					border-top: solid 5px $green; 
 
 				}			
 
@@ -234,13 +117,18 @@
 					zoom: 1; /* Fix for IE7 */
 					*display: inline; /* Fix for IE7 */
 					padding: 12px 18px;
-					color: darken($grey, 20%);
+					color: darken($grey, 40%);
 					font-weight: 400;					
-					border-left:solid 1px $grey;
-					border-right:solid 1px $grey;
-					border-top:solid 1px $grey;
+					//border-left:solid 1px $grey;
+					//border-right:solid 1px $grey;
+					//border-top:solid 1px $grey;
 				}
 			}
+		}
+
+		.main-profile-pic{
+			
+			border:solid 5px darken($grey, 5%);
 		}
 
 		ul.light-user-info{

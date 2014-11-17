@@ -103,32 +103,14 @@
 <!-- Begin call for javascript files -->
 
 <!-- Vendors -->
-<script type="text/javascript" src="assets/foundation-5.4.0/js/vendor/jquery.js"></script>
-<!-- <script type="text/javascript" src="assets/js/jquery.mobile-1.4.5.min.js"></script> -->
-<script type="text/javascript" src="assets/foundation-5.4.0/js/vendor/fastclick.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/vendor/jquery.cookie.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/vendor/modernizr.js"></script>
-<script type="text/javascript" src="assets/js/app/default.js"></script>
+{{HTML::script("assets/foundation-5.4.0/js/vendor/jquery.js")}}
+{{HTML::script("assets/foundation-5.4.0/js/vendor/fastclick.js")}}
+{{HTML::script("assets/foundation-5.4.0/js/vendor/jquery.cookie.js")}}
+{{HTML::script("assets/foundation-5.4.0/js/vendor/modernizr.js")}}
+{{HTML::script("assets/js/app/default.js")}}
 
 <!-- Foundation dot JS -->
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.js"></script>
-
-<!-- Foundation plugins -->
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.accordion.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.alert.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.clearing.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.dropdown.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.equalizer.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.interchange.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.joyride.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.magellan.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.offcanvas.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.orbit.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.reveal.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.slider.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.tab.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.tooltip.js"></script>
-<script type="text/javascript" src="assets/foundation-5.4.0/js/foundation/foundation.topbar.js"></script>
+{{HTML::script("assets/foundation-5.4.0/js/foundation.min.js")}}
 
 <!-- End call for javascript files -->
 
