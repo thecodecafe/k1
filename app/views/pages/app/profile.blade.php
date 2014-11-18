@@ -10,7 +10,7 @@
 
 @include("_partials.app.user.profile_header")
 
-<div class="grey section profile-bg" style="background:url({{URL::to('/')}}/assets/img/app/test/profile-bg.jpg) center center no-repeat; background-size: cover;">
+<div class="grey section profile-bg" style="background:url({{URL::to('assets/img/app/test/profile-bg.jpg')}}) center center no-repeat; background-size: cover;">
 
 	<div class="profile-bg-olay">&nbsp;</div>
 
