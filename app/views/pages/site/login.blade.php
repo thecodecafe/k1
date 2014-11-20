@@ -1,4 +1,4 @@
-@section("page_title") Login | Knowledge First... @stop
+@section("title") Login | Knowledge First... @stop
 
 @section('menu_style')  @stop
 

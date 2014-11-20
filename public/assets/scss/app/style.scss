@@ -107,7 +107,7 @@
 
 				&.active{
 
-					border-top: solid 5px $green; 
+					border-top: solid 5px $green;
 
 				}			
 
@@ -131,18 +131,78 @@
 			border:solid 5px darken($grey, 5%);
 		}
 
-		ul.light-user-info{
-			position: relative;
-			float: left;
-			width: 100%;
-			margin: 0px;
-			line-height:1.2;
+		.suggested-connections{
 
-			li{
+			>ul{
 				position: relative;
 				float: left;
 				width: 100%;
-				margin-bottom: 0px;
+				margin: 0px 0px;
+				list-style: none;
+
+				>li:last-child{
+					border-bottom: none;
+				}
+
+				>li{
+					position: relative;
+					float: left;
+					width: 100%;
+					margin: 0px 0px;
+					padding: 10px 12px;
+					@extend %boxsizing;
+					border-bottom: solid 1px $grey;
+
+					.conn-cancel{
+						position: absolute;
+						right: 12px;
+						top: 10px;
+						height: 18px;
+						width: 18px;
+						line-height: 18px;
+						text-align: center;
+						background-color: darken($grey, 15%);
+						color: #fff;
+						font-size: $xxs-text;
+						font-weight: 100;
+						@include borderradius(100%);
+						opacity: 0.6;
+						@include transitions(all, 500ms, ease);
+						z-index: 20;
+
+						&:hover{
+							opacity: 1;
+						}
+					}
+
+					.conn-image{
+						position: relative;
+						float: left;
+						width: 30%;
+					}
+
+					.conn-data{
+						position: relative;
+						float: left;
+						width: 70%;
+						padding-left: 10px;
+						@extend %boxsizing;
+					}	
+					.conn-button{
+						position: relative;
+						float: left;
+						width: 100%;
+					}		
+				}
+			}
+		}
+
+		.profile-section{
+
+			.add-button{
+				position: absolute;
+				right: 0px;
+				top: 0px;
 			}
 		}
 	}

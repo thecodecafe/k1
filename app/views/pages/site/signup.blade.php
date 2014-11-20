@@ -1,4 +1,9 @@
-@extends("site.layout.master")
+@section("title") Sign up - Create your free account | Knowledge First... @stop
+
+@section('menu_style')  @stop
+
+@section('current_page') signup @stop
+
 @section("content")
 
 <div class="section">

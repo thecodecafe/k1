@@ -7,24 +7,28 @@
 		</ul>
 
 		<!-- This part of the menu appears on the left of the menu -->
-		<ul class="menu left">
-			<li class="">
-				<a href="{{URL::to('what-we-do')}}">What we do</a>
-			</li>
-			<li class="">
-				<a href="{{URL::to('case-study')}}">Case study</a>
-			</li>
-			<li class="">
-				<a href="{{URL::to('blog')}}">Blog</a>
-			</li>
-		</ul>
+		
+		{{Form::open(["url"=>"#", "method"=>"post", "class"=>"topbar-search-form marginbottom0"])}}
+			{{Form::text("term", "", ["autocomplete"=>"off"])}}
+		{{Form::close()}}
+		
 		
 		<!-- This part of the menu appears on the right of the menu -->
 		<ul class="menu right">
+			<li class="deadlink">
+				<a href="#" class="m-text"><i class="fa fa-bell"></i></a>
+			</li>
 			<li class="user-menu">
 				<a href="javascript:;">
-					<img src="{{URL::to("/")}}/assets/img/app/test/profile-pic.jpg" class="round"> <i class="fa fa-angle-down"></i>
+					<img src="{{URL::to("/")}}/assets/img/app/test/profile-pic.jpg" class="round"> Daniella <i class="fa fa-angle-down"></i>
 				</a>
+
+				<ul class="right submenu">
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Connections</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#">Log Out</a></li>
+				</ul>
 			</li>
 		</ul>
 

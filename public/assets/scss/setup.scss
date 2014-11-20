@@ -8,6 +8,13 @@ $grey:#eee;
 $darkgrey:#333;
 $deadblue:#2d3649;
 $green:#7fb423;
+$xxl-text:4.500em;
+$xl-text:3.000em;
+$l-text:2.250em;
+$m-text:1.500em;
+$s-text:1.125em;
+$xs-text:0.875em;
+$xxs-text:0.688em;
 
 body{
 	&.f-topbar-fixed{
@@ -82,11 +89,13 @@ p, h1, h2, h3, h4, h5, h6{
 
 	.white-text{color: #fff;}
 
-	.light-text{color: $grey;}
+	.light-text{color: darken($grey, 5%);}
 
 	.grey-text{color: darken($grey, 40%);}
 
 	.black-text{ color:#000;}
+
+	.deadblue-text{ color:lighten($deadblue, 20%);}
 
 	img{
 		&.round{
@@ -307,91 +316,55 @@ p, h1, h2, h3, h4, h5, h6{
 }
 
 .nav-bar{
-		position: relative;
-		float: left;
-		width: 100%;
-		height: 80px;
-		z-index: 100;
-		background-color: $blue;
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 80px;
+	z-index: 100;
+	background-color: $blue;
 
-		&.transparent{
-			position: absolute;
-			background-color: none;
-			background: none;
-			@include transitions(background, 0.5s, ease);
+	&.transparent{
+		position: absolute;
+		background-color: none;
+		background: none;
+		@include transitions(background, 0.5s, ease);
 
-			&.fixed{
-				background-color: $blue;
-				height: 60px;
-				padding: 0px 0px;
-			}
+		&.fixed{
+			background-color: $blue;
+			height: 60px;
+			padding: 0px 0px;
 		}
+	}
 
-		&.white{
-			background-color: #fff;
-			background: #fff;
-			@include transitions(background, 0.5s, ease);
+	&.white{
+		background-color: #fff;
+		background: #fff;
+		@include transitions(background, 0.5s, ease);
 
-			.nav-bar-inner{
+		.nav-bar-inner{
 
-				a{
-					color: darken($grey, 40%);
-				}
+			a{
+				color: darken($grey, 40%);
+			}
 
-				ul.logo-area{
+			ul.logo-area{
 
-					li.name{
+				li.name{
 
-						a{
-							color: $blue;
-						}
-					}
-				}
-
-				ul.menu{
-
-					li{
-
-						a{
-							color: darken($grey, 40%);
-						}
-
-
+					a{
+						color: $blue;
 					}
 				}
 			}
 
-			&.fixed{
-				background-color: $blue;
-				height: 60px;
-				padding: 0px 0px;
+			ul.menu{
 
-				a{
-					color: #fff;
-				}
+				li{
 
-				ul.logo-area{
-
-					li.name{
-
-						a{
-							color: #fff;
-						}
+					a{
+						color: darken($grey, 40%);
 					}
 				}
-
-				ul.menu{
-
-					li{
-
-						a{
-							color: #fff;
-						}
-
-
-					}
-				}
-
 			}
 		}
 
@@ -399,137 +372,256 @@ p, h1, h2, h3, h4, h5, h6{
 			background-color: $blue;
 			height: 60px;
 			padding: 0px 0px;
-			opacity: 0.9;
+
+			a{
+				color: #fff;
+			}
+
+			ul.logo-area{
+
+				li.name{
+
+					a{
+						color: #fff;
+					}
+				}
+			}
+
+			ul.menu{
+
+				li{
+
+					a{
+						color: #fff;
+					}
+
+
+				}
+			}
 
 		}
+	}
 
-		&.large{
-			&.fixed{
-				position: fixed;
+	&.fixed{
+		background-color: $blue;
+		height: 60px;
+		padding: 0px 0px;
+		opacity: 0.9;
+
+	}
+
+	&.large{
+		&.fixed{
+			position: fixed;
+			height: 60px;
+			padding: 0px 70px;
+			@extend %boxsizing;
+
+			@include transitions(all, 0.5s, ease);
+		}
+		padding: 10px 70px;
+
+		.nav-bar-inner{
+			position: relative;
+			float: left;
+			width: 100%;
+			height: 60px;
+
+			a{
+				display: inline-block;
+				vertical-align: top;
+				zoom: 1; /* Fix for IE7 */
+				*display: inline; /* Fix for IE7 */
+				color: white;
 				height: 60px;
-				padding: 0px 70px;
-				@extend %boxsizing;
-
-				@include transitions(all, 0.5s, ease);
 			}
-			padding: 10px 70px;
 
-			.nav-bar-inner{
+			.topbar-search-form{
+				display: inline-block;
+				vertical-align: top;
+				zoom: 1; /* Fix for IE7 */
+				*display: inline; /* Fix for IE7 */
+				margin-bottom: 0px;
+				margin-top: 10px;
+				width: 40%;
+
+				input[type="text"]{
+					background: none;
+					color: #fff;
+					border: solid 1px #fff;
+					width: 100%;
+				}
+			}
+
+			ul.logo-area{
 				position: relative;
 				float: left;
-				width: 100%;
-				height: 60px;
+				margin: 0px;
+				list-style: none;
 
-				a{
+				li.name{
+					padding: 0px 20px;
 					display: inline-block;
 					vertical-align: top;
 					zoom: 1; /* Fix for IE7 */
 					*display: inline; /* Fix for IE7 */
-					color: white;
+					line-height: 60px;
 					height: 60px;
+					font-size: 18px;
+					font-weight: bold;
 				}
+			}
 
-				ul.logo-area{
-					position: relative;
-					float: left;
-					margin: 0px;
-					list-style: none;
+			ul.menu{
+				position: relative;
+				margin: 0px;
+				list-style: none;
 
-					li.name{
-						padding: 0px 20px;
-						display: inline-block;
-						vertical-align: top;
-						zoom: 1; /* Fix for IE7 */
-						*display: inline; /* Fix for IE7 */
-						line-height: 60px;
-						height: 60px;
-						font-size: 18px;
-						font-weight: bold;
-					}
-				}
+				li{
+					padding: 0px 20px;
+					display: inline-block;
+					vertical-align: top;
+					zoom: 1; /* Fix for IE7 */
+					*display: inline; /* Fix for IE7 */
+					line-height: 60px;
+					height: 60px;
+					font-size: 14px;
 
-				ul.menu{
-					position: relative;
-					margin: 0px;
-					list-style: none;
+					&.user-menu{
+						>a{
+							padding: 0px 8px;
+							display: inline-block;
+							vertical-align: top;
+							zoom: 1; /* Fix for IE7 */
+							*display: inline; /* Fix for IE7 */
+							@include borderradius(3px); 
+							height: 40px;
+							margin-top: 10px;
+							line-height: 40px;
+							color:#fff;
+							font-weight: bold;
+							font-size: 16px;
 
-					li{
-						padding: 0px 20px;
-						display: inline-block;
-						vertical-align: top;
-						zoom: 1; /* Fix for IE7 */
-						*display: inline; /* Fix for IE7 */
-						line-height: 60px;
-						height: 60px;
-						font-size: 14px;
-
-						&.user-menu{
-							>a{
-								padding: 0px 8px;
+							img{
 								display: inline-block;
 								vertical-align: top;
 								zoom: 1; /* Fix for IE7 */
 								*display: inline; /* Fix for IE7 */
-								@include borderradius(3px); 
 								height: 40px;
-								margin-top: 10px;
-								line-height: 40px;
-								color:#fff;
-								font-weight: bold;
-								font-size: 16px;
-
-								img{
-									display: inline-block;
-									vertical-align: top;
-									zoom: 1; /* Fix for IE7 */
-									*display: inline; /* Fix for IE7 */
-									height: 40px;
-									width: 40px;
-								}
+								width: 40px;
 							}
+						}
+						
+					}
+
+					&.round-outline-link{
+						a{
+							padding: 0px 8px;
+							display: inline-block;
+							vertical-align: top;
+							zoom: 1; /* Fix for IE7 */
+							*display: inline; /* Fix for IE7 */
+							@include borderradius(3px); 
+							height: 40px;
+							margin-top: 10px;
+							line-height: 40px;
+							color:#fff; 
+							background: #7fb423;
+							@include transitions(all, 0.5s, ease);
+
+							&:hover{
+								background: darken(#7fb423, 5%);
+								color: #fff;
+							}
+						}
+					}
+
+					&.deadlink{
+
+						a{
 							
+							color:darken($blue, 5%); 
 						}
 
-						&.round-outline-link{
-							a{
-								padding: 0px 8px;
-								display: inline-block;
-								vertical-align: top;
-								zoom: 1; /* Fix for IE7 */
-								*display: inline; /* Fix for IE7 */
-								@include borderradius(3px); 
+					}
+
+
+					ul.submenu{
+						position: absolute;
+						top: 100%;
+						margin: 0px;
+						list-style: none;
+						background-color: #fff;
+						display: none;
+
+						>li{
+							position: relative;
+							float: left;
+							width: 100%;
+							height: 40px;
+							margin: 0px 0px;
+							padding: 0px 0px;
+
+							>a{
+								position: relative;
+								float: left;
+								width: 100%;
 								height: 40px;
-								margin-top: 10px;
+								padding: 0px 10px;
+								@extend %boxsizing;
+								color: #666;
 								line-height: 40px;
-								color:#fff; 
-								background: #7fb423;
-								@include transitions(all, 0.5s, ease);
 
 								&:hover{
-									background: darken(#7fb423, 5%);
-									color: #fff;
+									color: darken($blue, 5%)
 								}
 							}
+						}
+					}
+
+					&:hover{
+
+						ul.submenu{
+							display: block;
 						}
 					}
 				}
 			}
 		}
+	}
 
-		&.small{
-			position: relative;
+	&.small{
+		position: relative;
+		height: 60px;
+
+		&.fixed{
+			position: fixed;
 			height: 60px;
+		}
+		.nav-bar-inner{
+			position: relative;
+			float: left;
+			width: 100%;
 
-			&.fixed{
-				position: fixed;
-				height: 60px;
-			}
-			.nav-bar-inner{
-				position: relative;
-				float: left;
+			a{
+				display: inline-block;
+				vertical-align: top;
+				zoom: 1; /* Fix for IE7 */
+				*display: inline; /* Fix for IE7 */
+				color: white;
 				width: 100%;
+				text-align: center;
+			}
 
-				a{
+			.menu-toggler{
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				width:60px;
+				line-height: 60px;
+				font-size: 24px;
+
+				span{
 					display: inline-block;
 					vertical-align: top;
 					zoom: 1; /* Fix for IE7 */
@@ -537,102 +629,84 @@ p, h1, h2, h3, h4, h5, h6{
 					color: white;
 					width: 100%;
 					text-align: center;
+					cursor: pointer;
 				}
+			}
 
-				.menu-toggler{
-					position: absolute;
-					right: 0px;
-					top: 0px;
-					width:60px;
+			ul.logo-area{
+				position: relative;
+				float: left;
+				width: 100%;
+				margin: 0px;
+				list-style: none;
+				height: 60px;
+
+				li.name{
+					padding: 0px 20px;
+					display: inline-block;
+					vertical-align: top;
+					zoom: 1; /* Fix for IE7 */
+					*display: inline; /* Fix for IE7 */
 					line-height: 60px;
-					font-size: 24px;
-
-					span{
-						display: inline-block;
-						vertical-align: top;
-						zoom: 1; /* Fix for IE7 */
-						*display: inline; /* Fix for IE7 */
-						color: white;
-						width: 100%;
-						text-align: center;
-						cursor: pointer;
-					}
-				}
-
-				ul.logo-area{
-					position: relative;
-					float: left;
-					width: 100%;
-					margin: 0px;
-					list-style: none;
 					height: 60px;
+					font-size: 18px;
+					width: 100%;
+					font-weight: bold;
 
-					li.name{
-						padding: 0px 20px;
-						display: inline-block;
-						vertical-align: top;
-						zoom: 1; /* Fix for IE7 */
-						*display: inline; /* Fix for IE7 */
-						line-height: 60px;
+					a{
 						height: 60px;
-						font-size: 18px;
-						width: 100%;
-						font-weight: bold;
-
-						a{
-							height: 60px;
-						}
 					}
 				}
+			}
 
-				ul.menu{
-					position: relative;
-					float: left;
+			ul.menu{
+				position: relative;
+				float: left;
+				width: 100%;
+				margin: 0px;
+				list-style: none;
+				display: none;
+				background-color: $darkblue;
+				background: $darkblue;
+				padding: 10px 0px 20px 0px;
+
+				li{
+					padding: 0px 20px;
+					display: inline-block;
+					vertical-align: top;
+					zoom: 1; /* Fix for IE7 */
+					*display: inline; /* Fix for IE7 */
+					line-height: 40px;
+					height: 40px;
 					width: 100%;
-					margin: 0px;
-					list-style: none;
-					display: none;
-					background-color: $darkblue;
-					background: $darkblue;
-					padding: 10px 0px 20px 0px;
+					font-size: 14px;
+					@extend %boxsizing;
 
-					li{
-						padding: 0px 20px;
-						display: inline-block;
-						vertical-align: top;
-						zoom: 1; /* Fix for IE7 */
-						*display: inline; /* Fix for IE7 */
-						line-height: 40px;
-						height: 40px;
-						width: 100%;
-						font-size: 14px;
-						@extend %boxsizing;
+					&.round-outline-link{
+						a{
+							padding: 0px 8px;
+							display: inline-block;
+							vertical-align: top;
+							zoom: 1; /* Fix for IE7 */
+							*display: inline; /* Fix for IE7 */
+							@include borderradius(3px); 
+							height: 40px;
+							margin-top: 10px;
+							line-height: 40px;
+							color:#fff; 
+							background: #7fb423;
+							@include transitions(all, 0.5s, ease);
 
-						&.round-outline-link{
-							a{
-								padding: 0px 8px;
-								display: inline-block;
-								vertical-align: top;
-								zoom: 1; /* Fix for IE7 */
-								*display: inline; /* Fix for IE7 */
-								@include borderradius(3px); 
-								height: 40px;
-								margin-top: 10px;
-								line-height: 40px;
-								color:#fff; 
-								background: #7fb423;
-								@include transitions(all, 0.5s, ease);
-
-								&:hover{
-									background: darken(#7fb423, 5%);
-									color: #fff;
-								}
+							&:hover{
+								background: darken(#7fb423, 5%);
+								color: #fff;
 							}
 						}
 					}
 				}
 			}
 		}
+	}
 
 }
 
@@ -679,6 +753,30 @@ p, h1, h2, h3, h4, h5, h6{
 		p, h1, ,h2, h3, h4, h5, h6{ color:#fff;}
 	}
 
+	&.bordered{
+
+		border: solid 1px $grey;
+
+		&.hover-effect{
+
+			@include transitions(all, 500ms, ease);
+
+			&:hover{
+				border-color: darken($grey, 10%);
+			}
+
+		}
+
+	}
+
+	.underlined{
+		border-bottom: solid 1px $grey;
+	}
+
+	.overlined{
+		border-top: solid 1px $grey;
+	}
+	
 	&.underlined{
 		border-bottom: solid 1px $grey;
 	}
