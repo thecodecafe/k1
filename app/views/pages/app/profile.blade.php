@@ -61,20 +61,30 @@
 				</div>
 			</div>
 
+			<div class="row">
+				<div class="large-12 medium-12 small-12 columns end profile-contacts margintop2 fly-in-plugin">
+					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-phone"></i></span></a>
+					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-envelope-o"></i></span></a>
+					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-twitter"></i></span></a>
+					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-facebook"></i></span></a>
+					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-google-plus"></i></span></a>
+				</div>
+			</div>
+
 		</div>
 
 	</div>
 </div>
 
 
-<div class="grey no-padding section">
+<div class="grey section">
 
 	<div class="row">
 
-		<div class="large-9 medium-8 small-12 columns marginbottom4 margintop4">
+		<div class="large-9 medium-8 small-12 columns">
 
 
-			<div class="side-padded less-padding section profile-section">
+			<div class="side-padded less-padding section profile-section radius">
 				<div class="row">
 					<div class="large-12 medium-12 small-12 columns">
 						<div class="less-padding side-padded section">
@@ -88,20 +98,47 @@
 							</h4>
 
 							<div class="no-padding section overlined">
-								<ul class="no-bullet">
-									<li class="margintop2 xs-text grey-text">
-										First one
+
+								<ul class="no-bullet experience-list">
+									
+									<li class="marginbottom2 margintop2 xs-text grey-text">
+										<h4 class="m-text grey-text bold marginbottom0">Gateway International Church</h4>
+										<p class="s-text grey-test marginbottom0 bold">Web Developer</p>
+										<p class="xs-text grey-text marginbottom0">March 2012 - March 2014</p>
+										<p class="xs-text grey-text marginbottom0">
+											Port Harcourt, Rivers, Nigeria
+										</p>
+										<p class="xs-text grey-text marginbottom0">
+											Designed and developed their website for them.
+										</p>
+
+										<div class="experience-actions s-text">				
+											<a href="#" class="grey-text">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</div>
 									</li>
-									<li class="margintop2 xs-text grey-text">
-										First one
+
+									<li class="marginbottom2 margintop2 xs-text grey-text">
+										<h4 class="m-text grey-text bold marginbottom0">Signal Mashins</h4>
+										<p class="s-text grey-test marginbottom0 bold">Lead Web Developer</p>
+										<p class="xs-text grey-text marginbottom0">Since March 2012</p>
+										<p class="xs-text grey-text marginbottom0">
+											Port Harcourt, Rivers, Nigeria
+										</p>
+										<p class="xs-text grey-text marginbottom0">
+											Lead Web Developer.
+										</p>
+
+										<div class="experience-actions s-text">				
+											<a href="#" class="grey-text">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</div>
 									</li>
-									<li class="margintop2 xs-text grey-text">
-										First one
-									</li>
-									<li class="margintop2 xs-text grey-text">
-										First one
-									</li>
+
 								</ul>
+
 							</div>
 						
 
@@ -116,24 +153,62 @@
 				</div>
 			</div>
 
-			<div class="side-padded less-padding section profile-section margintop3">
+			<div class="side-padded less-padding section profile-section radius margintop4">
 				<div class="row">
 					<div class="large-12 medium-12 small-12 columns">
 						<div class="less-padding side-padded section">
 						
 							<h4 class="l-text text-left light-text">
 								Education
+
 								<div class="add-button">
 									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Education</button>
 								</div>
 							</h4>
 
-							<!-- <ul class="no-bullet xs-text">
-								<li class="margintop2"><strong>Name</strong> Daniella Barde</li>
-								<li class="margintop2"><strong>Email</strong> email@website.com</li>
-								<li class="margintop2"><strong>Phone</strong> 07031376674</li>
-								<li class="margintop2"><strong>Date Of Birth</strong> January 18, 1988</li>
-							</ul> -->
+							<div class="no-padding section overlined">
+								
+								<ul class="no-bullet experience-list">
+									
+									<li class="marginbottom2 margintop2 xs-text grey-text">
+										<h4 class="m-text grey-text bold marginbottom0">Marvel Heroes Acedemy</h4>
+										<p class="s-text grey-test marginbottom0 bold">Juniour WAEC</p>
+										<p class="xs-text grey-text marginbottom0">March 2012</p>
+
+										<div class="experience-actions s-text">				
+											<a href="#" class="grey-text">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</div>
+									</li>
+
+									<li class="marginbottom2 margintop2 xs-text grey-text">
+										<h4 class="m-text grey-text bold marginbottom0">Capcom High School</h4>
+										<p class="s-text grey-test marginbottom0 bold">O Level (WAEC)</p>
+										<p class="xs-text grey-text marginbottom0">March 2014</p>
+
+										<div class="experience-actions s-text">				
+											<a href="#" class="grey-text">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</div>
+									</li>
+
+									<li class="marginbottom2 margintop2 xs-text grey-text">
+										<h4 class="m-text grey-text bold marginbottom0">DC University</h4>
+										<p class="s-text grey-test marginbottom0 bold">BSC - Video Gaming</p>
+										<p class="xs-text grey-text marginbottom0">March 2016</p>
+
+										<div class="experience-actions s-text">				
+											<a href="#" class="grey-text">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</div>
+									</li>
+
+								</ul>
+								
+							</div>
 						
 
 						</div>
@@ -141,61 +216,50 @@
 
 					</div>
 
-					<div class="large-12 medium-12 small-12 columns">
-						
-					</div>
 				</div>
 			</div>
 
-			<div class="side-padded less-padding section profile-section margintop3">
+			<div class="side-padded less-padding section profile-section radius margintop4">
 				<div class="row">
 					<div class="large-12 medium-12 small-12 columns">
 						<div class="less-padding side-padded section">
 						
 							<h4 class="l-text text-left light-text">
-								Personal Skills
+								Skills
+
 								<div class="add-button">
 									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Skill</button>
 								</div>
 							</h4>
 
-							<!-- <ul class="no-bullet xs-text">
-								<li class="margintop2"><strong>Name</strong> Daniella Barde</li>
-								<li class="margintop2"><strong>Email</strong> email@website.com</li>
-								<li class="margintop2"><strong>Phone</strong> 07031376674</li>
-								<li class="margintop2"><strong>Date Of Birth</strong> January 18, 1988</li>
-							</ul> -->
-						
+							<div class="no-padding section overlined">
+								
+								<ul class="no-bullet experience-list">
 
-						</div>
+									<?php $dummy_skills = "Programming, Graphic Design, Caligraphy, Video Editting, Drawing, 2D Animation, 3D Animation"; 
+										$dummy_skills = explode(",", $dummy_skills)
+									?>
+									
+									<li class="marginbottom0 margintop2 xs-text grey-text">
+										
+										@foreach($dummy_skills as $dummy_skill)
 
+											<button class="tiny button">
+												{{trim($dummy_skill)}}
+											</button>
 
-					</div>
+										@endforeach
 
-					<div class="large-12 medium-12 small-12 columns">
-						
-					</div>
-				</div>
-			</div>
+										<div class="experience-actions s-text">				
+											<a href="#" class="grey-text">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</div>
+									</li>
 
-			<div class="side-padded less-padding section profile-section margintop3">
-				<div class="row">
-					<div class="large-12 medium-12 small-12 columns">
-						<div class="less-padding side-padded section">
-						
-							<h4 class="l-text text-left light-text">
-								Hobbies
-								<div class="add-button">
-									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Hobby</button>
-								</div>
-							</h4>
-
-							<!-- <ul class="no-bullet xs-text">
-								<li class="margintop2"><strong>Name</strong> Daniella Barde</li>
-								<li class="margintop2"><strong>Email</strong> email@website.com</li>
-								<li class="margintop2"><strong>Phone</strong> 07031376674</li>
-								<li class="margintop2"><strong>Date Of Birth</strong> January 18, 1988</li>
-							</ul> -->
+								</ul>
+								
+							</div>
 						
 
 						</div>
@@ -211,53 +275,64 @@
 
 		</div>
 
-		<div class="large-3 medium-4 small-12 columns marginbottom4 margintop4">
+		<div class="large-3 medium-4 small-12 columns">
 
-			<div class="side-padded less-padding section suggested-connections">
-				<h4 class="dark-text xs-text">Suggested Connections</h4>
+			
+			<div class="side-padded less-padding section radius">
 				<ul class="no-bullet">
-					<li>
-						<a href="javascript:;" class="conn-cancel"><i class="fa fa-times"></i></a>
-						<div class="conn-image">
-							<img src="{{URL::to("/")}}/assets/img/app/test/people/10.jpg" class="round fullwidthimage">
-						</div>
-						<div class="conn-data grey-text xs-text">
-							Jane Doe<br>
-							<span class="light-text xx-s">300k RP</span>
-						</div>
-						<div class="conn-button margintop1">
-							<button type="button" class="expand tiny button marginbottom0"><i class="fa fa-circle-thin"></i>&nbsp;Connect</button>
-						</div>
-					</li>
-					<li>
-						<a href="javascript:;" class="conn-cancel"><i class="fa fa-times"></i></a>
-						<div class="conn-image">
-							<img src="{{URL::to("/")}}/assets/img/app/test/people/9.jpg" class="round fullwidthimage">
-						</div>
-						<div class="conn-data grey-text xs-text">
-							Jon Doe<br>
-							<span class="light-text xx-s">260k connections</span>
-						</div>
-						<div class="conn-button margintop1">
-							<button type="button" class="expand tiny success button marginbottom0"><i class="fa fa-circle"></i>&nbsp;Connected</button>
-						</div>
-					</li>
-					<li>
-						<a href="javascript:;" class="conn-cancel"><i class="fa fa-times"></i></a>
-						<div class="conn-image">
-							<img src="{{URL::to("/")}}/assets/img/app/test/people/8.jpg" class="round fullwidthimage">
-						</div>
-						<div class="conn-data grey-text xs-text">
-							Joan Doe<br>
-							<span class="light-text xx-s">4.5m reputation</span>
-						</div>
-						<div class="conn-button margintop1">
-							<button type="button" class="expand tiny button marginbottom0"><i class="fa fa-circle-thin"></i>&nbsp;Connect</button>
-						</div>
+					<li class="text-center">
+						<span class="l-text blue-text">60.5k</span><br>
+						<span class="xxs-text uppercase grey-text">Profile Visits This Week</span>
 					</li>
 				</ul>
 			</div>
 
+			<div class="side-padded less-padding section radius margintop4">
+				<div class="no-padding section underlined suggested-connections">
+					<h4 class="dark-text xs-text">Suggested Connections</h4>
+					<ul class="no-bullet">
+						<li>
+							<a href="javascript:;" class="conn-cancel"><i class="fa fa-times"></i></a>
+							<div class="conn-image">
+								<img src="{{URL::to("/")}}/assets/img/app/test/people/10.jpg" class="round fullwidthimage">
+							</div>
+							<div class="conn-data grey-text xs-text">
+								Jane Doe<br>
+								<span class="light-text xx-s">300k RP</span>
+							</div>
+							<div class="conn-button margintop1">
+								<button type="button" class="expand tiny button marginbottom0"><i class="fa fa-circle-thin"></i>&nbsp;Connect</button>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;" class="conn-cancel"><i class="fa fa-times"></i></a>
+							<div class="conn-image">
+								<img src="{{URL::to("/")}}/assets/img/app/test/people/9.jpg" class="round fullwidthimage">
+							</div>
+							<div class="conn-data grey-text xs-text">
+								Jon Doe<br>
+								<span class="light-text xx-s">260k connections</span>
+							</div>
+							<div class="conn-button margintop1">
+								<button type="button" class="expand tiny success button marginbottom0"><i class="fa fa-circle"></i>&nbsp;Connected</button>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;" class="conn-cancel"><i class="fa fa-times"></i></a>
+							<div class="conn-image">
+								<img src="{{URL::to("/")}}/assets/img/app/test/people/8.jpg" class="round fullwidthimage">
+							</div>
+							<div class="conn-data grey-text xs-text">
+								Joan Doe<br>
+								<span class="light-text xx-s">4.5m reputation</span>
+							</div>
+							<div class="conn-button margintop1">
+								<button type="button" class="expand tiny button marginbottom0"><i class="fa fa-circle-thin"></i>&nbsp;Connect</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 
 	</div>

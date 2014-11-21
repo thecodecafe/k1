@@ -800,4 +800,12 @@ p, h1, h2, h3, h4, h5, h6{
 
 		padding: 0px 0px;
 	}
+
+	&.radius{
+		@include borderradius2(3px, 3px, 3px, 3px);
+	}
+
+	&.radius2{
+		@include borderradius2(6px, 6px, 6px, 6px);
+	}
 }

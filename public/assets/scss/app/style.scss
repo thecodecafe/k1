@@ -140,11 +140,11 @@
 				margin: 0px 0px;
 				list-style: none;
 
-				>li:last-child{
+				li:last-child{
 					border-bottom: none;
 				}
 
-				>li{
+				li{
 					position: relative;
 					float: left;
 					width: 100%;
@@ -202,7 +202,70 @@
 			.add-button{
 				position: absolute;
 				right: 0px;
-				top: 0px;
+				top: -20px;
+			}
+		}
+
+		.experience-list{
+
+			li{
+				position: relative;
+				float: left;
+				width: 100%;
+				padding: 10px 14px;
+				@extend %boxsizing;
+
+				.experience-actions{
+					position: absolute;
+					right: 0px;
+					top: 0px;
+					display: none;					
+
+					a{
+						display: inline-block;
+						vertical-align: top;
+						zoom: 1; /* Fix for IE7 */
+						*display: inline; /* Fix for IE7 */
+						width: 24px;
+						height: 24px;
+					}
+				}
+
+				&:hover{
+					.experience-actions{
+						display: block;					
+					}
+
+					background-color: lighten($grey, 4%);
+				}
+			}
+		}
+
+		.profile-contacts{
+
+			text-align: center;
+
+			.contact-link{
+				display: inline-block;
+				vertical-align: top;
+				zoom: 1; /* Fix for IE7 */
+				*display: inline; /* Fix for IE7 */
+				width: 36px;
+				height: 36px;
+				margin-right: 10px;
+				background: none;
+				background-color: none;
+				border: solid 1px #fff;
+				color: #fff;
+				line-height: 36px;
+				text-align: center;
+				@include borderradius(100%);
+				@include transitions(all, 500ms, ease);
+
+				&:hover{
+					border: solid 1px $blue;
+				    color: $blue;
+				}
 			}
 		}
 	}

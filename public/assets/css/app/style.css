@@ -234,7 +234,7 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     -o-transform: translateY(0) scale(1) translate3d(0, 0, 0);
     -webkit-transform: translateY(0) scale(1) translate3d(0, 0, 0); }
 
-.nav-bar.large.fixed, .nav-bar.large .nav-bar-inner ul.menu li ul.submenu > li > a, .nav-bar.small .nav-bar-inner ul.menu li, .section.side-padded, .section.less-padding.side-padded, .site-container.user .edit-profile-options .edit-option li, .site-container.user .suggested-connections > ul > li, .site-container.user .suggested-connections > ul > li .conn-data {
+.nav-bar.large.fixed, .nav-bar.large .nav-bar-inner ul.menu li ul.submenu > li > a, .nav-bar.small .nav-bar-inner ul.menu li, .section.side-padded, .section.less-padding.side-padded, .site-container.user .edit-profile-options .edit-option li, .site-container.user .suggested-connections > ul li, .site-container.user .suggested-connections > ul li .conn-data, .site-container.user .experience-list li {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -611,6 +611,48 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
       padding: 20px 20px; }
   .section.no-padding {
     padding: 0px 0px; }
+  .section.radius {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-bottom-left-radius: 3px;
+    -moz-border-bottom-right-radius: 3px;
+    -moz-border-top-left-radius: 3px;
+    -moz-border-top-right-radius: 3px;
+    -ms-border-bottom-left-radius: 3px;
+    -ms-border-bottom-right-radius: 3px;
+    -ms-border-top-left-radius: 3px;
+    -ms-border-top-right-radius: 3px;
+    -o-border-bottom-left-radius: 3px;
+    -o-border-bottom-right-radius: 3px;
+    -o-border-top-left-radius: 3px;
+    -o-border-top-right-radius: 3px; }
+  .section.radius2 {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-bottom-left-radius: 6px;
+    -moz-border-bottom-right-radius: 6px;
+    -moz-border-top-left-radius: 6px;
+    -moz-border-top-right-radius: 6px;
+    -ms-border-bottom-left-radius: 6px;
+    -ms-border-bottom-right-radius: 6px;
+    -ms-border-top-left-radius: 6px;
+    -ms-border-top-right-radius: 6px;
+    -o-border-bottom-left-radius: 6px;
+    -o-border-bottom-right-radius: 6px;
+    -o-border-top-left-radius: 6px;
+    -o-border-top-right-radius: 6px; }
 
 .site-container {
   position: relative;
@@ -716,16 +758,16 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     width: 100%;
     margin: 0px 0px;
     list-style: none; }
-    .site-container.user .suggested-connections > ul > li:last-child {
+    .site-container.user .suggested-connections > ul li:last-child {
       border-bottom: none; }
-    .site-container.user .suggested-connections > ul > li {
+    .site-container.user .suggested-connections > ul li {
       position: relative;
       float: left;
       width: 100%;
       margin: 0px 0px;
       padding: 10px 12px;
       border-bottom: solid 1px #eee; }
-      .site-container.user .suggested-connections > ul > li .conn-cancel {
+      .site-container.user .suggested-connections > ul li .conn-cancel {
         position: absolute;
         right: 12px;
         top: 10px;
@@ -749,24 +791,78 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
         -o-transition: all 500ms ease;
         transition: all 500ms ease;
         z-index: 20; }
-        .site-container.user .suggested-connections > ul > li .conn-cancel:hover {
+        .site-container.user .suggested-connections > ul li .conn-cancel:hover {
           opacity: 1; }
-      .site-container.user .suggested-connections > ul > li .conn-image {
+      .site-container.user .suggested-connections > ul li .conn-image {
         position: relative;
         float: left;
         width: 30%; }
-      .site-container.user .suggested-connections > ul > li .conn-data {
+      .site-container.user .suggested-connections > ul li .conn-data {
         position: relative;
         float: left;
         width: 70%;
         padding-left: 10px; }
-      .site-container.user .suggested-connections > ul > li .conn-button {
+      .site-container.user .suggested-connections > ul li .conn-button {
         position: relative;
         float: left;
         width: 100%; }
   .site-container.user .profile-section .add-button {
     position: absolute;
     right: 0px;
-    top: 0px; }
+    top: -20px; }
+  .site-container.user .experience-list li {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 10px 14px; }
+    .site-container.user .experience-list li .experience-actions {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      display: none; }
+      .site-container.user .experience-list li .experience-actions a {
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1;
+        /* Fix for IE7 */
+        *display: inline;
+        /* Fix for IE7 */
+        width: 24px;
+        height: 24px; }
+    .site-container.user .experience-list li:hover {
+      background-color: #f8f8f8; }
+      .site-container.user .experience-list li:hover .experience-actions {
+        display: block; }
+  .site-container.user .profile-contacts {
+    text-align: center; }
+    .site-container.user .profile-contacts .contact-link {
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      /* Fix for IE7 */
+      *display: inline;
+      /* Fix for IE7 */
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+      background: none;
+      background-color: none;
+      border: solid 1px #fff;
+      color: #fff;
+      line-height: 36px;
+      text-align: center;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%;
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -ms-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease; }
+      .site-container.user .profile-contacts .contact-link:hover {
+        border: solid 1px #00a4ff;
+        color: #00a4ff; }
 
 /*# sourceMappingURL=style.css.map */
