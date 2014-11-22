@@ -20,6 +20,7 @@ Route::get('/case-study', 'siteController@case_study');
 Route::get('/case-study/{slug}', 'siteController@case_study');
 Route::get('/blog', 'siteController@blog');
 
+Route::get('/search', 'userController@search');
 Route::get('/{user_id}', 'userController@index');
 Route::get('/{user_id}/messages', 'userController@messages');
 Route::get('/{user_id}/notifications', 'userController@notifications');

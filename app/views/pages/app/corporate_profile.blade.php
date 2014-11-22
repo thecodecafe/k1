@@ -1,4 +1,4 @@
-@section('title') Daniella Barde's profile | Knowledge First... @stop
+@section('title') MTN Nigeria's profile | Knowledge First... @stop
 
 @section('menu_style')  @stop
 
@@ -8,7 +8,7 @@
 
 @section("content")
 
-<div class="grey section profile-bg" style="background:url({{URL::to('assets/img/app/test/profile-bg.jpg')}}) center center no-repeat; background-size: cover;">
+<div class="grey section profile-bg" style="background:url({{URL::to('assets/img/app/test/profile-bg2.jpg')}}) center center no-repeat; background-size: cover;">
 
 	<div class="profile-bg-olay">&nbsp;</div>
 
@@ -27,18 +27,37 @@
 
 
 			<div class="row fly-in-plugin">
+				<div class="large-12 medium-12 small-12 columns hide">
+					<ul class="inline-list marginbottom0">
+						<li>
+							<img src="{{URL::to("/")}}/assets/img/app/test/people/1.jpg" class="round main-profile-pic">
+						</li>
+						<li>
+							<ul class="no-bullet light-user-info">
+								<li class="bold s-text white-text">
+									MTN Nigeria
+								</li>		
+								<li class="xl-text blue-text">2.4K</li>
+								<li class="xxs-text uppercase white-text">Connection</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 				<div class="large-12 medium-12 small-12 columns margintop1 ffl">
 					<p class="text-center marginbottom1">
-						<img src="{{URL::to("/")}}/assets/img/app/test/people/10.jpg" class="round main-profile-pic">
+						<img src="{{URL::to("/")}}/assets/img/app/test/people/1.jpg" class="round main-profile-pic">
 					</p>
 					<p class="text-center bold s-text white-text marginbottom0">
-						Daniella Barde
+						MTN Nigeria
+					</p>
+					<p class="text-center xxs-text white-text marginbottom0">
+						Corporation
 					</p>
 					<p class="text-center xl-text blue-text marginbottom0">
 						2.4K
 					</p>
 					<p class="text-center xxs-text uppercase white-text marginbottom0">
-						Reputation Points
+						Connections
 					</p>
 				</div>
 			</div>
@@ -72,10 +91,10 @@
 						<div class="less-padding side-padded section">
 						
 							<h4 class="l-text text-left light-text">
-								Experience
+								Available Jobs
 
 								<div class="add-button">
-									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Experience</button>
+									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Job</button>
 								</div>
 							</h4>
 
@@ -84,14 +103,14 @@
 								<ul class="no-bullet ps-list">
 									
 									<li class="marginbottom2 margintop2 xs-text grey-text">
-										<h4 class="m-text grey-text bold marginbottom0">Gateway International Church</h4>
-										<p class="s-text grey-test marginbottom0 bold">Web Developer</p>
-										<p class="xs-text grey-text marginbottom0">March 2012 - March 2014</p>
-										<p class="xs-text grey-text marginbottom0">
-											Port Harcourt, Rivers, Nigeria
+										<h4 class="m-text bold marginbottom0">Customer Care Representative</h4>
+										<p class="s-text marginbottom0 bold">Marketting &amp; Adertising</p>
+										<p class="xs-text marginbottom0">Salary Range: 30,000 - 100,000</p>
+										<p class="xs-text marginbottom0">
+											Port Harcourt, Rivers
 										</p>
-										<p class="xs-text grey-text marginbottom0">
-											Designed and developed their website for them.
+										<p class="xs-text marginbottom0">
+											Habdles calls from current and prospective customers.
 										</p>
 
 										<div class="ps-actions s-text">				
@@ -102,14 +121,14 @@
 									</li>
 
 									<li class="marginbottom2 margintop2 xs-text grey-text">
-										<h4 class="m-text grey-text bold marginbottom0">Signal Mashins</h4>
-										<p class="s-text grey-test marginbottom0 bold">Lead Web Developer</p>
-										<p class="xs-text grey-text marginbottom0">Since March 2012</p>
-										<p class="xs-text grey-text marginbottom0">
-											Port Harcourt, Rivers, Nigeria
+										<h4 class="m-text bold marginbottom0">Dancer</h4>
+										<p class="s-text marginbottom0 bold">Skills &amp; Talent</p>
+										<p class="xs-text marginbottom0">Salary Range: Less than 30,000</p>
+										<p class="xs-text marginbottom0">
+											Lagos, Nigeria
 										</p>
-										<p class="xs-text grey-text marginbottom0">
-											Lead Web Developer.
+										<p class="xs-text marginbottom0">
+											Dance with publicity crew and sell MTN SIM cards on the streets.
 										</p>
 
 										<div class="ps-actions s-text">				
@@ -118,6 +137,7 @@
 											</a>
 										</div>
 									</li>
+
 
 								</ul>
 
@@ -141,73 +161,7 @@
 						<div class="less-padding side-padded section">
 						
 							<h4 class="l-text text-left light-text">
-								Education
-
-								<div class="add-button">
-									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Education</button>
-								</div>
-							</h4>
-
-							<div class="no-padding section overlined">
-								
-								<ul class="no-bullet ps-list">
-									
-									<li class="marginbottom2 margintop2 xs-text grey-text">
-										<h4 class="m-text grey-text bold marginbottom0">Marvel Heroes Acedemy</h4>
-										<p class="s-text grey-test marginbottom0 bold">Juniour WAEC</p>
-										<p class="xs-text grey-text marginbottom0">March 2012</p>
-
-										<div class="ps-actions s-text">				
-											<a href="#" class="grey-text">
-												<i class="fa fa-pencil"></i>
-											</a>
-										</div>
-									</li>
-
-									<li class="marginbottom2 margintop2 xs-text grey-text">
-										<h4 class="m-text grey-text bold marginbottom0">Capcom High School</h4>
-										<p class="s-text grey-test marginbottom0 bold">O Level (WAEC)</p>
-										<p class="xs-text grey-text marginbottom0">March 2014</p>
-
-										<div class="ps-actions s-text">				
-											<a href="#" class="grey-text">
-												<i class="fa fa-pencil"></i>
-											</a>
-										</div>
-									</li>
-
-									<li class="marginbottom2 margintop2 xs-text grey-text">
-										<h4 class="m-text grey-text bold marginbottom0">DC University</h4>
-										<p class="s-text grey-test marginbottom0 bold">BSC - Video Gaming</p>
-										<p class="xs-text grey-text marginbottom0">March 2016</p>
-
-										<div class="ps-actions s-text">				
-											<a href="#" class="grey-text">
-												<i class="fa fa-pencil"></i>
-											</a>
-										</div>
-									</li>
-
-								</ul>
-								
-							</div>
-						
-
-						</div>
-
-
-					</div>
-
-				</div>
-			</div>
-
-			<div class="side-padded less-padding section profile-section radius margintop4">
-				<div class="row">
-					<div class="large-12 medium-12 small-12 columns">
-						<div class="less-padding side-padded section">
-						
-							<h4 class="l-text text-left light-text">
-								Skills
+								Interest
 
 								<div class="add-button">
 									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Skill</button>

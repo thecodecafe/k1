@@ -135,6 +135,8 @@ var k1app = new function(){
 
 		profile_edit_options_toggle();
 
+		show_search_filter_for_mobile();
+
 
 	};
 
@@ -183,6 +185,34 @@ var k1app = new function(){
 			event.preventDefault();
 
 		});
+	};
+
+	var show_search_filter_for_mobile = function(){
+
+		if ($("div.site-container").hasClass('search')) {
+
+			$("a.msf-trigger").on('click', function(event) {
+
+				$(".msf-list-container").addClass('active');
+
+				$("body").addClass('hide-overflow');
+
+				event.preventDefault();
+				/* Act on the event */
+			});
+
+			$("a.msf-trigger2").on('click', function(event) {
+
+				$(".msf-list-container").removeClass('active');
+
+				$("body").removeClass('hide-overflow');
+
+				event.preventDefault();
+				/* Act on the event */
+			});
+
+		}
+
 	};
 
 

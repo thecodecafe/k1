@@ -7,9 +7,14 @@ class userController extends \BaseController {
 	
 	public function index($user_id)
 	{	
-		$data['user_tab'] = "profile";
 		$data['menu_style'] = " ";
 		$this->layout->content = View::make("pages.app.profile", $data);
+	}
+
+	public function search()
+	{	
+		$data['menu_style'] = " ";
+		$this->layout->content = View::make("pages.app.search", $data);
 	}
 
 }

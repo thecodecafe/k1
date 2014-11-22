@@ -8,7 +8,7 @@
 
 		<!-- This part of the menu appears on the left of the menu -->
 		
-		{{Form::open(["url"=>"#", "method"=>"post", "class"=>"topbar-search-form marginbottom0"])}}
+		{{Form::open(["url"=>"search", "method"=>"get", "class"=>"topbar-search-form marginbottom0"])}}
 			{{Form::text("term", "", ["autocomplete"=>"off"])}}
 		{{Form::close()}}
 		

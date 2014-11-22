@@ -1,4 +1,4 @@
-@section("page_title") Blog | Knowledge First... @stop
+@section("page_title") What We Do | Knowledge First... @stop
 
 @section('menu_style')  @stop
 
@@ -7,7 +7,7 @@
 @section("content")
 
 <div class="section no-padding fly-in-plugin">
-	<img data-interchange="[{{URL::to('/').'/'}}assets/img/site/wwd-hero-image.jpg, (only screen and (min-width: 641px))], [{{$URL::to('/').'/'}assets/img/site/wwd-hero-image-small.jpg, (only screen and (max-width: 640px))]" class="fullwidthimage">
+	<img data-interchange="[{{URL::to('/').'/'}}assets/img/site/wwd-hero-image.jpg, (only screen and (min-width: 641px))], [{{URL::to('/').'/'}}assets/img/site/wwd-hero-image-small.jpg, (only screen and (max-width: 640px))]" class="fullwidthimage">
 
 	<div class="hero-header robotoslab">
 		<h4 class="xxl-text white-text marginbottom1 margintop8 text-center show-for-medium-up bold">Lorem ipsum dolor</h4>

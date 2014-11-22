@@ -22,6 +22,10 @@ body{
 	}
 	font-family: 'Open Sans', 'Roboto Slab', 'Roboto', sans-serif;
 	font-weight: 400;
+
+	&.hide-overflow{
+		overflow: hidden;
+	}
 }
 a{
 	color: $blue;
@@ -417,7 +421,7 @@ p, h1, h2, h3, h4, h5, h6{
 			padding: 0px 70px;
 			@extend %boxsizing;
 
-			@include transitions(all, 0.5s, ease);
+			@include transitions(all, 0.5s, ease-in-out);
 		}
 		padding: 10px 70px;
 
@@ -719,6 +723,14 @@ p, h1, h2, h3, h4, h5, h6{
 
 	&.grey{
 		background-color: $grey;
+		
+		&.underlined{
+			border-bottom: solid 1px darken($grey, 10%);
+		}
+
+		&.overlined{
+			border-top: solid 1px darken($grey, 10%);
+		}
 	}
 
 	&.dark{
@@ -779,6 +791,10 @@ p, h1, h2, h3, h4, h5, h6{
 	
 	&.underlined{
 		border-bottom: solid 1px $grey;
+	}
+
+	&.overlined{
+		border-top: solid 1px $grey;
 	}
 
 	&.side-padded{
