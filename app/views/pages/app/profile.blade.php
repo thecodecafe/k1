@@ -8,54 +8,68 @@
 
 @section("content")
 
-<div class="grey section profile-bg" style="background:url({{URL::to('assets/img/app/test/profile-bg.jpg')}}) center center no-repeat; background-size: cover;">
-
-	<div class="profile-bg-olay">&nbsp;</div>
-
-	<div class="edit-profile-options">
-		<a href="javascript:;" class="tiny white button marginbottom0 togglebutton" type="button"><i class="fa fa-pencil"></i></a>
-		<ul class="edit-option">
-			<li class="xxs-text"><a href="#" class="grey-text">Background photo</a></li>
-			<li class="xxs-text"><a href="#" class="grey-text">Profile Picture</a></li>
-			<li class="xxs-text"><a href="#" class="grey-text">Settings</a></li>
-		</ul>
-	</div>
+<div class="grey section no-padding">
 
 	<div class="row">
 
 		<div class="large-12 medium-12 small-12 columns">
 
+			<div class="grey section profile-bg" style="background:url({{URL::to('assets/img/app/test/profile-bg.jpg')}}) center center no-repeat; background-size: cover;">
 
-			<div class="row fly-in-plugin">
-				<div class="large-12 medium-12 small-12 columns margintop1 ffl">
-					<p class="text-center marginbottom1">
-						<img src="{{URL::to("/")}}/assets/img/app/test/people/10.jpg" class="round main-profile-pic">
-					</p>
-					<p class="text-center bold s-text white-text marginbottom0">
-						Daniella Barde
-					</p>
-					<p class="text-center xl-text blue-text marginbottom0">
-						2.4K
-					</p>
-					<p class="text-center xxs-text uppercase white-text marginbottom0">
-						Reputation Points
-					</p>
+				<div class="profile-bg-olay">&nbsp;</div>
+
+				<div class="edit-profile-options">
+					<a href="javascript:;" class="tiny white button marginbottom0 togglebutton" type="button"><i class="fa fa-pencil"></i></a>
+					<ul class="edit-option">
+						<li class="xxs-text"><a href="#" class="grey-text">Background photo</a></li>
+						<li class="xxs-text"><a href="#" class="grey-text">Profile Picture</a></li>
+						<li class="xxs-text"><a href="#" class="grey-text">Settings</a></li>
+					</ul>
 				</div>
-			</div>
 
-			<div class="row">
-				<div class="large-12 medium-12 small-12 columns end profile-contacts margintop2 fly-in-plugin">
-					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-phone"></i></span></a>
-					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-envelope-o"></i></span></a>
-					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-twitter"></i></span></a>
-					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-facebook"></i></span></a>
-					<a href="#" class="contact-link ffl"><span class="cl-icon"><i class="fa fa-google-plus"></i></span></a>
+				<div class="row">
+
+					<div class="large-12 medium-12 small-12 columns">
+
+
+						<div class="row fly-in-plugin">
+							<div class="large-12 medium-12 small-12 columns margintop1 ffl">
+								<p class="text-center marginbottom1">
+									<img src="{{URL::to("/")}}/assets/img/app/test/people/10.jpg" class="round main-profile-pic">
+								</p>
+								<p class="text-center bold s-text white-text marginbottom0">
+									Daniella Barde
+								</p>
+								<p class="text-center xl-text blue-text marginbottom0">
+									2.4K
+								</p>
+								<p class="text-center xxs-text uppercase white-text marginbottom0">
+									Reputation Points
+								</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="large-12 medium-12 small-12 columns end profile-contacts margintop2 fly-in-plugin">
+								<a href="#" class="contact-link ffl margintop1"><span class="cl-icon"><i class="fa fa-phone"></i></span></a>
+								<a href="#" class="contact-link ffl margintop1"><span class="cl-icon"><i class="fa fa-envelope-o"></i></span></a>
+								<a href="#" class="contact-link ffl margintop1"><span class="cl-icon"><i class="fa fa-twitter"></i></span></a>
+								<a href="#" class="contact-link ffl margintop1"><span class="cl-icon"><i class="fa fa-behance"></i></span></a><br>
+								<a href="#" class="contact-link ffl margintop1"><span class="cl-icon"><i class="fa fa-dribbble"></i></span></a>
+								<a href="#" class="contact-link ffl margintop1"><span class="cl-icon"><i class="fa fa-facebook"></i></span></a>
+								<a href="#" class="contact-link ffl margintop1"><span class="cl-icon"><i class="fa fa-google-plus"></i></span></a>
+							</div>
+						</div>
+
+					</div>
+
 				</div>
 			</div>
 
 		</div>
 
 	</div>
+
 </div>
 
 

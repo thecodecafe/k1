@@ -12,15 +12,10 @@
 */
 
 
-Route::get('/', 'siteController@index');
-Route::get('/what-we-do', 'siteController@wwd');
-Route::get('/login', 'siteController@login');
-Route::get('/signup', 'siteController@signup');
-Route::get('/case-study', 'siteController@case_study');
-Route::get('/case-study/{slug}', 'siteController@case_study');
-Route::get('/blog', 'siteController@blog');
+Route::get('', 'siteController@index');
+Route::get('what-we-do', 'siteController@wwd');
+Route::get('login', 'siteController@login');
+Route::get('signup', 'siteController@signup');
 
-Route::get('/search', 'userController@search');
-Route::get('/{user_id}', 'userController@index');
-Route::get('/{user_id}/messages', 'userController@messages');
-Route::get('/{user_id}/notifications', 'userController@notifications');
+Route::resource('profile', 'userController');
+Route::get('search', 'userController@search');

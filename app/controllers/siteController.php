@@ -1,6 +1,6 @@
 <?php
 
-class siteController extends \BaseController {
+class siteController extends BaseController {
 
 	public $layout = "layout.site.master";
 
@@ -24,12 +24,6 @@ class siteController extends \BaseController {
 			
 			$this->layout->content =  View::make("pages.site.case_study");
 		}
-	}
-
-	public function blog()
-	{
-		
-		$this->layout->content =  View::make("pages.site.blog");
 	}
 
 	public function login()
