@@ -101,6 +101,19 @@ p, h1, h2, h3, h4, h5, h6{
 
 	.deadblue-text{ color:lighten($deadblue, 20%);}
 
+	.bg-olay{
+		position: absolute;
+		float: left;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		opacity: 0.6;
+
+		&.black{
+			background-color: #000;
+		}
+	}
+
 	img{
 		&.round{
 			-webkit-border-radius: 100%;
@@ -634,6 +647,17 @@ p, h1, h2, h3, h4, h5, h6{
 					width: 100%;
 					text-align: center;
 					cursor: pointer;
+
+					img.mobile-menu-loggedin-toggler{
+						display: inline-block;
+						vertical-align: top;
+						zoom: 1;
+						*display: inline;
+						width:32px;
+						height: 32px; 
+						margin-top:12px;
+
+					}
 				}
 			}
 
@@ -681,10 +705,27 @@ p, h1, h2, h3, h4, h5, h6{
 					zoom: 1; /* Fix for IE7 */
 					*display: inline; /* Fix for IE7 */
 					line-height: 40px;
-					height: 40px;
 					width: 100%;
 					font-size: 14px;
 					@extend %boxsizing;
+
+					.topbar-search-form{
+						display: inline-block;
+						vertical-align: top;
+						zoom: 1; /* Fix for IE7 */
+						*display: inline; /* Fix for IE7 */
+						margin-bottom: 0px;
+						margin-top: 10px;
+						width: 100%;
+						@extend %boxsizing;
+
+						input[type="text"]{
+							background: none;
+							color: #fff;
+							border: solid 1px #fff;
+							width: 100%;
+						}
+					}
 
 					&.round-outline-link{
 						a{
@@ -714,12 +755,91 @@ p, h1, h2, h3, h4, h5, h6{
 
 }
 
+.round-outline-icon{
+
+	text-align: center;
+
+	.outline-icon{
+		display: inline-block;
+		vertical-align: top;
+		zoom: 1; /* Fix for IE7 */
+		*display: inline; /* Fix for IE7 */
+		width: 36px;
+		height: 36px;
+		margin-right: 10px;
+		line-height: 36px;
+		text-align: center;
+		@include borderradius(100%);
+		@include transitions(all, 500ms, ease);
+		background: none;
+		background-color: none;
+
+		&.small{
+			width: 24px;
+			height: 24px;
+			margin-right: 10px;
+			line-height: 24px;
+			font-size: $xxs-text;
+
+		}
+
+		&.white{
+			border: solid 1px #fff;
+			color: #fff;
+			
+
+			&:hover{
+				border: solid 1px $blue;
+			    color: $blue;
+			}
+		}
+
+		&.blue{
+			border: solid 1px $blue;
+			color: $blue;
+			
+
+			&:hover{
+				border: solid 1px darken($blue, 5%);
+			    color: darken($blue, 5%);
+			}
+		}
+
+		&.black{
+			border: solid 1px #000;
+			color: #000;
+			
+
+			&:hover{
+				border: solid 1px lighten(#000, 5%);
+			    color: lighten(#000, 5%);
+			}
+		}
+
+		&.darkgrey{
+			border: solid 1px $darkgrey;
+			color: $darkgrey;
+			
+
+			&:hover{
+				border: solid 1px lighten($darkgrey, 5%);
+			    color: lighten($darkgrey, 5%);
+			}
+		}
+	}
+}
+
 .section{
 	position: relative;
 	float: left;
 	width: 100%;
 	padding: 40px 0px;
 	background-color: #fff;
+
+	&.no-bg{
+		background:none;
+		background-color:none;
+	}
 
 	&.grey{
 		background-color: $grey;

@@ -77,25 +77,46 @@
 
 	<div class="row">
 
+
+		<!-- Profile left pane -->
+
 		<div class="large-9 medium-8 small-12 columns">
 
-
+			<!-- Experience profile section -->
+			
 			<div class="side-padded less-padding section profile-section radius">
 				<div class="row">
 					<div class="large-12 medium-12 small-12 columns">
 						<div class="less-padding side-padded section">
+
+							
+							<!-- Profile section title -->
 						
-							<h4 class="l-text text-left light-text">
+							<h4 class="l-text text-left light-text robotoslab">
 								Experience
+
+
+								<!-- Add experience button -->
 
 								<div class="add-button">
 									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Experience</button>
 								</div>
+
+								<!-- End of add experience button -->
+
+
 							</h4>
+
+							<!-- End of profile section title -->
+
+
+							<!-- Profile section list container -->
 
 							<div class="no-padding section overlined">
 
 								<ul class="no-bullet ps-list">
+
+									<!-- Profile section list -->
 									
 									<li class="marginbottom2 margintop2 xs-text grey-text">
 										<h4 class="m-text grey-text bold marginbottom0">Gateway International Church</h4>
@@ -105,7 +126,7 @@
 											Port Harcourt, Rivers, Nigeria
 										</p>
 										<p class="xs-text grey-text marginbottom0">
-											Designed and developed their website for them.
+											Designed and developed their website.
 										</p>
 
 										<div class="ps-actions s-text">				
@@ -115,6 +136,11 @@
 										</div>
 									</li>
 
+									<!-- End of profile section list -->
+
+
+									<!-- Profile section list -->
+									
 									<li class="marginbottom2 margintop2 xs-text grey-text">
 										<h4 class="m-text grey-text bold marginbottom0">Signal Mashins</h4>
 										<p class="s-text grey-test marginbottom0 bold">Lead Web Developer</p>
@@ -133,10 +159,23 @@
 										</div>
 									</li>
 
+									<!-- End of profile section list -->
+
 								</ul>
 
 							</div>
-						
+
+							<!-- End of profile section list container -->
+
+
+							<!-- Load more profile section list button -->
+
+							<div class="seaction less-padding">
+								<a href="#" class="marginbottom0 expand white small button">More <i class="fa fa-angle-down"></i></a>
+							</div>
+							
+							<!-- End of load more profile section list button -->
+
 
 						</div>
 
@@ -148,23 +187,43 @@
 					</div>
 				</div>
 			</div>
+			
+			<!-- End of experience profile dection -->
+
+
+			<!-- Profile education section -->
 
 			<div class="side-padded less-padding section profile-section radius margintop4">
 				<div class="row">
 					<div class="large-12 medium-12 small-12 columns">
 						<div class="less-padding side-padded section">
+
+							<!-- Profile section title -->
 						
-							<h4 class="l-text text-left light-text">
+							<h4 class="l-text text-left light-text robotoslab">
 								Education
+
+
+								<!-- Add education button -->
 
 								<div class="add-button">
 									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Education</button>
 								</div>
+
+								<!-- End of add education button -->
+
 							</h4>
+
+							<!-- End of profile section title -->
+
+
+							<!-- Profile section list container -->
 
 							<div class="no-padding section overlined">
 								
 								<ul class="no-bullet ps-list">
+
+									<!-- Profile section list -->
 									
 									<li class="marginbottom2 margintop2 xs-text grey-text">
 										<h4 class="m-text grey-text bold marginbottom0">Marvel Heroes Acedemy</h4>
@@ -178,6 +237,11 @@
 										</div>
 									</li>
 
+									<!-- End of profile section list -->
+
+
+									<!-- Profile section list -->
+
 									<li class="marginbottom2 margintop2 xs-text grey-text">
 										<h4 class="m-text grey-text bold marginbottom0">Capcom High School</h4>
 										<p class="s-text grey-test marginbottom0 bold">O Level (WAEC)</p>
@@ -189,6 +253,11 @@
 											</a>
 										</div>
 									</li>
+
+									<!-- End of profile section list -->
+
+
+									<!-- Profile section list -->
 
 									<li class="marginbottom2 margintop2 xs-text grey-text">
 										<h4 class="m-text grey-text bold marginbottom0">DC University</h4>
@@ -202,9 +271,23 @@
 										</div>
 									</li>
 
+									<!-- End of profile section list -->
+
+
 								</ul>
+
+
+								<!-- Load more profile section list button -->
+
+								<div class="seaction less-padding">
+									<a href="#" class="marginbottom0 expand white small button">More <i class="fa fa-angle-down"></i></a>
+								</div>
+
+								<!-- End of load more profile section list button -->
 								
 							</div>
+
+							<!-- End of profile section list container -->
 						
 
 						</div>
@@ -215,27 +298,47 @@
 				</div>
 			</div>
 
+			<!-- End of profile education section -->
+
+
+			<!-- Profile skills section -->
+
 			<div class="side-padded less-padding section profile-section radius margintop4">
 				<div class="row">
 					<div class="large-12 medium-12 small-12 columns">
 						<div class="less-padding side-padded section">
+
+							
+							<!-- Profile section title -->
 						
-							<h4 class="l-text text-left light-text">
+							<h4 class="l-text text-left light-text robotoslab">
 								Skills
+
+								<!-- Add skill button -->
 
 								<div class="add-button">
 									<button type="button" class="tiny white button"><i class="fa fa-plus"></i>&nbsp;Add Skill</button>
 								</div>
+
+								<!-- End of add skill button -->
+
 							</h4>
+
+							<!-- End of profile section title -->
+
+
+							<!-- Profile section list container -->
 
 							<div class="no-padding section overlined">
 								
 								<ul class="no-bullet ps-list">
 
-									<?php $dummy_skills = "Programming, Graphic Design, Caligraphy, Video Editting, Drawing, 2D Animation, 3D Animation"; 
-										$dummy_skills = explode(",", $dummy_skills)
+									<?php $dummy_skills = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."; 
+										$dummy_skills = explode(" ", $dummy_skills)
 									?>
 									
+									<!-- Profile section list -->
+
 									<li class="marginbottom0 margintop2 xs-text grey-text">
 										
 										@foreach($dummy_skills as $dummy_skill)
@@ -253,9 +356,13 @@
 										</div>
 									</li>
 
+									<!-- End of profile section list -->
+
 								</ul>
 								
 							</div>
+
+							<!-- End of profile section list container -->
 						
 
 						</div>
@@ -269,12 +376,25 @@
 				</div>
 			</div>
 
+			<!-- End of profile skills section -->
+
 		</div>
+
+		<!-- End of profile left pane -->
+
+
+		<!-- Profile right pane -->
 
 		<div class="large-3 medium-4 small-12 columns">
 
+			<!-- White space for mobile view -->
+
 			<div class="show-for-small-only margintop2">&nbsp;</div>
 
+			<!-- End of white space for mobile -->
+
+
+			<!-- Profile visitations counter -->
 			
 			<div class="side-padded less-padding section radius">
 				<ul class="no-bullet">
@@ -285,10 +405,22 @@
 				</ul>
 			</div>
 
+			<!-- End of profile visitations counter -->
+
+
+			<!-- Suggested connections -->
+
 			<div class="side-padded less-padding section radius margintop4">
 				<div class="no-padding section underlined suggested-connections">
+					
+					
+					<!-- Suggested connections title -->
+					
 					<h4 class="dark-text xs-text">Suggested Connections</h4>
+					
 					<ul class="no-bullet">
+						<!-- Suggested connections item -->
+						
 						<li>
 							<a href="javascript:;" class="conn-cancel"><i class="fa fa-times"></i></a>
 							<div class="conn-image">
@@ -302,6 +434,12 @@
 								<button type="button" class="expand tiny button marginbottom0"><i class="fa fa-circle-thin"></i>&nbsp;Connect</button>
 							</div>
 						</li>
+						
+						<!-- End of suggested connections item -->
+
+
+						<!-- Suggested connections item -->
+						
 						<li>
 							<a href="javascript:;" class="conn-cancel"><i class="fa fa-times"></i></a>
 							<div class="conn-image">
@@ -312,9 +450,15 @@
 								<span class="light-text xx-s">260k connections</span>
 							</div>
 							<div class="conn-button margintop1">
-								<button type="button" class="expand tiny success button marginbottom0"><i class="fa fa-circle"></i>&nbsp;Connected</button>
+								<button type="button" class="expand tiny button marginbottom0"><i class="fa fa-circle-o"></i>&nbsp;Connected</button>
 							</div>
 						</li>
+						
+						<!-- End of suggested connections item -->
+
+
+						<!-- Suggested connections item -->
+						
 						<li>
 							<a href="javascript:;" class="conn-cancel"><i class="fa fa-times"></i></a>
 							<div class="conn-image">
@@ -328,10 +472,30 @@
 								<button type="button" class="expand tiny button marginbottom0"><i class="fa fa-circle-thin"></i>&nbsp;Connect</button>
 							</div>
 						</li>
+						
+						<!-- End of suggested connections item -->
+
+
 					</ul>
 				</div>
 			</div>
+
+			<!-- End of suggested connections -->
+
+
+			<!-- Page footer -->
+
+			<div class="less-padding section side-padded">
+
+				<span class="xxs-text grey-text">&copy; 2014 Knowledge First. All rights reserved.</span>
+
+			</div>
+
+			<!-- End of page footer -->
+
 		</div>
+
+		<!-- End of profile right pane -->
 
 	</div>
 	

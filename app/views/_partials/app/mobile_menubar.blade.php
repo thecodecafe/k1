@@ -8,27 +8,18 @@
 
 		<!-- List of navbar menu -->
 		<ul class="menu left">
-			<li class="">
-				<a href="{{URL::to('what-we-do')}}">What we do</a>
+			<li>
+				{{Form::open(["url"=>"search", "method"=>"get", "class"=>"topbar-search-form marginbottom0"])}}
+					{{Form::text("term", "", ["autocomplete"=>"off"])}}
+				{{Form::close()}}
 			</li>
-			<li class="">
-				<a href="{{URL::to('case-study')}}">Case study</a>
-			</li>
-			<li class="">
-				<a href="{{URL::to('blog')}}">Blog</a>
-			</li>
-			<li class="">
-				<a href="{{URL::to('contact')}}">Contact</a>
-			</li>
-			<li class="">
-				<a href="{{URL::to('login')}}">Login</a>
-			</li>
-			<li class="round-outline-link">
-				<a href="{{URL::to('signup')}}"><span>Sign up</span></a>
-			</li>
+			<li><a href="{{URL::to('profile')}}/21">Profile</a></li>
+			<li><a href="#">Connections</a></li>
+			<li><a href="#">Settings</a></li>
+			<li><a href="#">Log Out</a></li>
 		</ul>
 
-		<span class="menu-toggler"><span href="#"><i class="fa fa-bars"></i></span></span>
+		<span class="menu-toggler"><span href="#"><img src="{{URL::to("/")}}/assets/img/app/test/profile-pic.jpg" class="round mobile-menu-loggedin-toggler"></span></span>
 
 	</div>
 </div>

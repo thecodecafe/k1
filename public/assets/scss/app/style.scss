@@ -323,4 +323,27 @@
 			}
 		}
 	}
+
+	&.jobs{
+
+		img.corporation_image{
+			display: inline-block;
+			vertical-align: top;
+			zoom: 1; /* Fix for IE7 */
+			*display: inline; /* Fix for IE7 */
+			border:solid 3px darken($grey, 5%);
+			width: 64px;
+
+		}
+
+		.corporation-background-photo{
+			background-size:cover;
+		}
+
+		.apply-button{
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		}
+	}
 }

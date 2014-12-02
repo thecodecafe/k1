@@ -10,6 +10,8 @@
 
 <div class="grey section" >
 
+	<!-- Search filter for mobile devices -->
+
 	<div class="mobile-search-filters show-for-small-only">
 		<a href="#" class="msf-trigger"><i class="fa fa-list"></i></a>
 		<div class="msf-list-container">
@@ -154,7 +156,15 @@
 		</div>
 	</div>
 
+	<!-- End of search filter for mobile -->
+
+
+	<!-- Large display search filter -->
+
 	<div class="row">
+
+
+		<!-- Search filter -->
 
 		<div class="large-2 medium-3 small-12 columns show-for-medium-up">
 
@@ -292,13 +302,25 @@
 
 		</div>
 
+		<!-- End of Search filter -->
+
+
+		<!-- Search results  -->
+
 		<div class="large-10 medium-9 small-12 columns">
 
 			<div class="radius2 side-padded less-padding section">
 
+				<!-- Search result count info -->
+
 				<h4 class="xs-text underlined">
 					Search returned 2,000 results
 				</h4>
+
+				<!-- End search result count info -->
+
+
+				<!-- Search result item -->
 
 				<div class="section less-padding underlined">
 
@@ -308,13 +330,17 @@
 						</div>
 						<div class="large-11 medium-10 small-9 columns">
 							<p class="marginbottom0">
-								<a href="profile" class="black-text">John Doe</a><br>
+								<a href="profile/21" class="black-text">John Doe</a><br>
 								<span class="grey-text xxs-text">Individual</span>
 							</p>
 						</div>
 					</div>
 
 				</div>
+
+				<!-- End of search result item -->
+
+				<!-- Search result item -->
 
 				<div class="section less-padding underlined">
 
@@ -331,6 +357,11 @@
 					</div>
 
 				</div>
+				
+				<!-- End of search result item -->
+
+
+				<!-- Search result item -->
 
 				<div class="section less-padding underlined">
 
@@ -354,6 +385,11 @@
 					</div>
 
 				</div>
+				
+				<!-- End of search result item -->
+
+
+				<!-- Search result item -->
 
 				<div class="section less-padding underlined">
 
@@ -370,6 +406,11 @@
 					</div>
 
 				</div>
+				
+				<!-- End of search result item -->
+
+
+				<!-- Search result item -->
 
 				<div class="section less-padding underlined">
 
@@ -393,6 +434,11 @@
 					</div>
 
 				</div>
+				
+				<!-- End of search result item -->
+
+
+				<!-- Search result item -->
 
 				<div class="section less-padding underlined">
 
@@ -416,6 +462,11 @@
 					</div>
 
 				</div>
+				
+				<!-- End of search result item -->
+
+
+				<!-- Search result item -->
 
 				<div class="section less-padding underlined">
 
@@ -432,6 +483,11 @@
 					</div>
 
 				</div>
+				
+				<!-- End of search result item -->
+
+
+				<!-- Search result item -->
 
 				<div class="section less-padding underlined">
 
@@ -448,6 +504,11 @@
 					</div>
 
 				</div>
+				
+				<!-- End of search result item -->
+
+
+				<!-- Search result item -->
 
 				<div class="section less-padding underlined">
 
@@ -471,6 +532,11 @@
 					</div>
 
 				</div>
+				
+				<!-- End of search result item -->
+
+
+				<!-- Load more buttom -->
 
 				<div class="section no-padding margintop2">
 
@@ -478,10 +544,16 @@
 
 				</div>
 
+				<!-- End of load more button -->
+
 			</div>
 
 		</div>
+
+		<!-- End of search results -->
 	</div>
+
+	<!-- End of large display search filter -->
 	
 </div>
 

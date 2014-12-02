@@ -24,7 +24,7 @@
 				</a>
 
 				<ul class="right submenu">
-					<li><a href="#">Profile</a></li>
+					<li><a href="{{URL::to('profile')}}/21">Profile</a></li>
 					<li><a href="#">Connections</a></li>
 					<li><a href="#">Settings</a></li>
 					<li><a href="#">Log Out</a></li>

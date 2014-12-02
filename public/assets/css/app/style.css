@@ -140,6 +140,16 @@ p, h1, h2, h3, h4, h5, h6 {
 .deadblue-text {
   color: #546588; }
 
+.bg-olay {
+  position: absolute;
+  float: left;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  opacity: 0.6; }
+  .bg-olay.black {
+    background-color: #000; }
+
 img.round {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -236,7 +246,7 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     -o-transform: translateY(0) scale(1) translate3d(0, 0, 0);
     -webkit-transform: translateY(0) scale(1) translate3d(0, 0, 0); }
 
-.nav-bar.large.fixed, .nav-bar.large .nav-bar-inner ul.menu li ul.submenu > li > a, .nav-bar.small .nav-bar-inner ul.menu li, .section.side-padded, .section.less-padding.side-padded, .site-container.user .edit-profile-options .edit-option li, .site-container.user .suggested-connections > ul li, .site-container.user .suggested-connections > ul li .conn-data, .site-container.user .profile-section .ps-list li, .site-container.search .mobile-search-filters, .site-container.search .mobile-search-filters .msf-list-container {
+.nav-bar.large.fixed, .nav-bar.large .nav-bar-inner ul.menu li ul.submenu > li > a, .nav-bar.small .nav-bar-inner ul.menu li, .nav-bar.small .nav-bar-inner ul.menu li .topbar-search-form, .section.side-padded, .section.less-padding.side-padded, .site-container.user .edit-profile-options .edit-option li, .site-container.user .suggested-connections > ul li, .site-container.user .suggested-connections > ul li .conn-data, .site-container.user .profile-section .ps-list li, .site-container.search .mobile-search-filters, .site-container.search .mobile-search-filters .msf-list-container {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -482,6 +492,14 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
           width: 100%;
           text-align: center;
           cursor: pointer; }
+          .nav-bar.small .nav-bar-inner .menu-toggler span img.mobile-menu-loggedin-toggler {
+            display: inline-block;
+            vertical-align: top;
+            zoom: 1;
+            *display: inline;
+            width: 32px;
+            height: 32px;
+            margin-top: 12px; }
       .nav-bar.small .nav-bar-inner ul.logo-area {
         position: relative;
         float: left;
@@ -523,9 +541,23 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
           *display: inline;
           /* Fix for IE7 */
           line-height: 40px;
-          height: 40px;
           width: 100%;
           font-size: 14px; }
+          .nav-bar.small .nav-bar-inner ul.menu li .topbar-search-form {
+            display: inline-block;
+            vertical-align: top;
+            zoom: 1;
+            /* Fix for IE7 */
+            *display: inline;
+            /* Fix for IE7 */
+            margin-bottom: 0px;
+            margin-top: 10px;
+            width: 100%; }
+            .nav-bar.small .nav-bar-inner ul.menu li .topbar-search-form input[type="text"] {
+              background: none;
+              color: #fff;
+              border: solid 1px #fff;
+              width: 100%; }
           .nav-bar.small .nav-bar-inner ul.menu li.round-outline-link a {
             padding: 0px 8px;
             display: inline-block;
@@ -553,12 +585,72 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
               background: #709f1f;
               color: #fff; }
 
+.round-outline-icon {
+  text-align: center; }
+  .round-outline-icon .outline-icon {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    /* Fix for IE7 */
+    *display: inline;
+    /* Fix for IE7 */
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    line-height: 36px;
+    text-align: center;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    background: none;
+    background-color: none; }
+    .round-outline-icon .outline-icon.small {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      line-height: 24px;
+      font-size: 0.688em; }
+    .round-outline-icon .outline-icon.white {
+      border: solid 1px #fff;
+      color: #fff; }
+      .round-outline-icon .outline-icon.white:hover {
+        border: solid 1px #00a4ff;
+        color: #00a4ff; }
+    .round-outline-icon .outline-icon.blue {
+      border: solid 1px #00a4ff;
+      color: #00a4ff; }
+      .round-outline-icon .outline-icon.blue:hover {
+        border: solid 1px #0094e6;
+        color: #0094e6; }
+    .round-outline-icon .outline-icon.black {
+      border: solid 1px #000;
+      color: #000; }
+      .round-outline-icon .outline-icon.black:hover {
+        border: solid 1px #0d0d0d;
+        color: #0d0d0d; }
+    .round-outline-icon .outline-icon.darkgrey {
+      border: solid 1px #333;
+      color: #333; }
+      .round-outline-icon .outline-icon.darkgrey:hover {
+        border: solid 1px #404040;
+        color: #404040; }
+
 .section {
   position: relative;
   float: left;
   width: 100%;
   padding: 40px 0px;
   background-color: #fff; }
+  .section.no-bg {
+    background: none;
+    background-color: none; }
   .section.grey {
     background-color: #eee; }
     .section.grey.underlined {
@@ -920,5 +1012,20 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
       .site-container.search .mobile-search-filters .msf-list-container.active {
         left: 0px;
         opacity: 1; }
+  .site-container.jobs img.corporation_image {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    /* Fix for IE7 */
+    *display: inline;
+    /* Fix for IE7 */
+    border: solid 3px #e1e1e1;
+    width: 64px; }
+  .site-container.jobs .corporation-background-photo {
+    background-size: cover; }
+  .site-container.jobs .apply-button {
+    position: absolute;
+    right: 20px;
+    top: 20px; }
 
 /*# sourceMappingURL=style.css.map */

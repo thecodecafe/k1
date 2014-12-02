@@ -23,7 +23,7 @@
 
 		@yield("content")
 
-		<div class="footer">
+		<div class="footer hide">
 
 			<div class="dark section less-padding">
 
