@@ -19,16 +19,16 @@ Route::get('signup', 'siteController@signup');
 
 
 
-Route::get('search', 'userController@search');
-Route::resource('profile', 'userController');
-Route::resource('job', 'jobsController');
+Route::get('search', 'profileController@search');
+Route::get('search', 'profileController@search');
+Route::resource('profile', 'profileController');
+Route::resource('jobs', 'jobsController');
 
 
 // API declarations
 
 Route::group(["prefix" => "api/v1"], function(){
 
-	Route::resource('job', 'jobsapiController');
-	Route::resource('users', 'jobsapiController');
+	Route::resource('jobs', 'jobsapiController');
 
 });

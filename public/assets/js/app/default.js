@@ -95,23 +95,12 @@ var k1app = new function(){
 			
 			if (scrollheight > 60) {
 
-				$(".nav-bar.large").addClass('fixed');
+				$(".top-bars").addClass('fixed');
 
 			}
 			else{
 
-				$(".nav-bar.large").removeClass('fixed');
-
-			}
-
-			if (scrollheight > mobile_menu_height) {
-
-				$(".nav-bar.small").addClass('fixed');
-
-			}
-			else{
-
-				$(".nav-bar.small").removeClass('fixed');
+				$(".top-bars").removeClass('fixed');
 
 			}
 
@@ -136,6 +125,8 @@ var k1app = new function(){
 		profile_edit_options_toggle();
 
 		show_search_filter_for_mobile();
+
+		show_hide_search_form();
 
 
 	};
@@ -215,10 +206,42 @@ var k1app = new function(){
 
 	};
 
+	var show_hide_search_form = function(){
+
+		var show_button = $(".show-searchbar-button"),
+			hide_button = $(".topbar-search-form .hide-button"),
+			form = $("form.topbar-search-form");
+
+			show_button.click(function(event){
+
+				form.slideDown("fast");
+
+				event.preventDefault();
+			});
+
+			hide_button.click(function(event){
+
+				form.slideUp("fast");
+
+				event.preventDefault();
+			});
+	}
+
+	var masonry_start = function(){
+
+		var container = document.querySelector('#js-masonry-container');
+		var msnry = new Masonry( container, {
+		  // options...
+		  itemSelector: '.item',
+		  columnWidth: 50,
+		});
+	}
+
 
 	this.init = function(){
 
 		autoloads();
+		masonry_start();
 
 	};
 

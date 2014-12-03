@@ -1,8 +1,6 @@
 <?php
 
-class jobsController extends BaseController {
-
-	public $layout = "layout.app.master";
+class jobsapiController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -11,9 +9,7 @@ class jobsController extends BaseController {
 	 */
 	public function index()
 	{
-		$data["menu_style"] = "";
-
-		$this->layout->content = View::make("pages.app.jobs", $data);
+		//
 	}
 
 
@@ -47,9 +43,7 @@ class jobsController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$data["menu_style"] = "";
-
-		$this->layout->content = View::make("pages.app.jobsingle", $data);
+		//
 	}
 
 

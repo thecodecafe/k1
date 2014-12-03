@@ -6,17 +6,23 @@
 			</li>
 		</ul>
 
-		<!-- This part of the menu appears on the left of the menu -->
+		<!-- List of navbar menu -->
+		<ul class="menu left">
+			<li><a href="{{URL::to('jobs')}}" title="Discover Jobs">Discover Jobs</a></li>
+		</ul>
 		
-		{{Form::open(["url"=>"search", "method"=>"get", "class"=>"topbar-search-form marginbottom0"])}}
-			{{Form::text("term", "", ["autocomplete"=>"off"])}}
-		{{Form::close()}}
 		
 		
 		<!-- This part of the menu appears on the right of the menu -->
 		<ul class="menu right">
+			<li>
+				<a href="#" class="m-text white-text show-searchbar-button" title="Search"><i class="fa fa-search"></i></a>
+			</li>
 			<li class="deadlink">
-				<a href="#" class="m-text"><i class="fa fa-bell"></i></a>
+				<a href="#" class="m-text" title="Notifications"><i class="fa fa-bell"></i></a>
+			</li>
+			<li class="deadlink">
+				<a href="#" class="m-text" title="Notifications"><i class="fa fa-envelope"></i></a>
 			</li>
 			<li class="user-menu">
 				<a href="javascript:;">
@@ -26,6 +32,7 @@
 				<ul class="right submenu">
 					<li><a href="{{URL::to('profile')}}/21">Profile</a></li>
 					<li><a href="#">Connections</a></li>
+					<li><a href="#">Job Applications</a></li>
 					<li><a href="#">Settings</a></li>
 					<li><a href="#">Log Out</a></li>
 				</ul>

@@ -16,10 +16,18 @@
 </head>
 
 <body>
-	<div class="site-container @yield('current_page')">
+	<?php $search_query = Input::get('q', ''); ?>
 
-		@include("_partials.app.menubar")
-		@include("_partials.app.mobile_menubar")
+	<div class="site-container @yield('current_page')">
+		
+		<div class="top-bars">
+
+			@include("_partials.app.searchbar")
+			@include("_partials.app.menubar")
+			@include("_partials.app.mobile_menubar")
+
+
+		</div>
 
 		@yield("content")
 
@@ -46,6 +54,7 @@
 {{HTML::script("assets/foundation-5.4.0/js/vendor/jquery.cookie.js")}}
 {{HTML::script("assets/foundation-5.4.0/js/vendor/modernizr.js")}}
 {{HTML::script("assets/js/app/default.js")}}
+{{HTML::script("assets/js/app/masonry.pkgd.min.js")}}
 
 <!-- Foundation dot JS -->
 {{HTML::script("assets/foundation-5.4.0/js/foundation.min.js")}}
