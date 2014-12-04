@@ -199,6 +199,8 @@ input[type="text"] {
   opacity: 0.6; }
   .bg-olay.black {
     background-color: #000; }
+  .bg-olay.white {
+    background-color: #fff; }
 
 img.round {
   -webkit-border-radius: 100%;
@@ -334,7 +336,12 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
       width: 100%;
       padding: 30px 0px; }
   .top-bars.fixed {
-    position: fixed; }
+    position: fixed;
+    -webkit-box-shadow: 0px -10px 5px 10px #000;
+    -moz-box-shadow: 0px -10px 5px 10px #000;
+    -ms-box-shadow: 0px -10px 5px 10px #000;
+    -o-box-shadow: 0px -10px 5px 10px #000;
+    box-shadow: 0px -10px 5px 10px #000; }
     .top-bars.fixed .nav-bar {
       background-color: #00a4ff;
       padding: 0px 0px; }
@@ -808,7 +815,8 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     -o-border-bottom-left-radius: 3px;
     -o-border-bottom-right-radius: 3px;
     -o-border-top-left-radius: 3px;
-    -o-border-top-right-radius: 3px; }
+    -o-border-top-right-radius: 3px;
+    overflow: hidden; }
   .section.radius2 {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -829,7 +837,30 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     -o-border-bottom-left-radius: 6px;
     -o-border-bottom-right-radius: 6px;
     -o-border-top-left-radius: 6px;
-    -o-border-top-right-radius: 6px; }
+    -o-border-top-right-radius: 6px;
+    overflow: hidden; }
+  .section.radius3 {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    -webkit-border-bottom-left-radius: 12px;
+    -webkit-border-bottom-right-radius: 12px;
+    -webkit-border-top-left-radius: 12px;
+    -webkit-border-top-right-radius: 12px;
+    -moz-border-bottom-left-radius: 12px;
+    -moz-border-bottom-right-radius: 12px;
+    -moz-border-top-left-radius: 12px;
+    -moz-border-top-right-radius: 12px;
+    -ms-border-bottom-left-radius: 12px;
+    -ms-border-bottom-right-radius: 12px;
+    -ms-border-top-left-radius: 12px;
+    -ms-border-top-right-radius: 12px;
+    -o-border-bottom-left-radius: 12px;
+    -o-border-bottom-right-radius: 12px;
+    -o-border-top-left-radius: 12px;
+    -o-border-top-right-radius: 12px;
+    overflow: hidden; }
 
 .site-container {
   position: relative;
@@ -1104,5 +1135,28 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     position: absolute;
     right: 20px;
     top: 20px; }
+  .site-container.jobs .filter-pane {
+    display: none; }
+  .site-container.jobs .jobs-loader {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 30; }
+    .site-container.jobs .jobs-loader .bg-olay {
+      z-index: 20; }
+    .site-container.jobs .jobs-loader .loader-icon {
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      /* Fix for IE7 */
+      *display: inline;
+      /* Fix for IE7 */
+      width: 48px;
+      margin-top: 200px;
+      z-index: 30;
+      opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

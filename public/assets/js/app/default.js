@@ -82,7 +82,7 @@ var k1app = new function(){
 	var autoloads = function(){
 		//predefine variables
 		var scrollheight,
-			mobile_menu_height;
+			topbars_height;
 
 		// initialize foundation
 		$(document).foundation();
@@ -91,7 +91,7 @@ var k1app = new function(){
 		$(window).scroll(function(event) {
 
 			scrollheight = $(this).scrollTop();
-			mobile_menu_height = $(".nav-bar.small").outerHeight();
+			topbars_height = $(".nav-bar.small").outerHeight();
 			
 			if (scrollheight > 60) {
 
@@ -127,6 +127,8 @@ var k1app = new function(){
 		show_search_filter_for_mobile();
 
 		show_hide_search_form();
+
+		show_hide_jobs_filter();
 
 
 	};
@@ -227,13 +229,51 @@ var k1app = new function(){
 			});
 	}
 
+	var show_hide_jobs_filter = function(){
+
+		if ($("div").hasClass("jobs") && $("a").hasClass("search-filter-button")) {
+
+
+			var button = $("a.search-filter-button"),
+				filter_pane = $(".jobs .filter-pane");
+
+				button.click(function(event){
+
+					if (filter_pane.is(":visible")) {
+
+						filter_pane.slideUp("fast");
+
+					}
+					else{
+
+						filter_pane.slideDown("fast");
+
+						filter_pane.one("mouseleave", function(event){
+
+							filter_pane.delay(500).slideUp("fast");
+
+							event.preventDefault();
+						});
+
+					}
+
+					event.preventDefault();
+
+				});
+
+				$(".jobs-loader").delay(1000).fadeOut("fast");
+
+		}
+	}
+
 	var masonry_start = function(){
 
 		var container = document.querySelector('#js-masonry-container');
 		var msnry = new Masonry( container, {
 		  // options...
 		  itemSelector: '.item',
-		  columnWidth: 50,
+		  columnWidth: 0,
+		  gutter: 0
 		});
 	}
 

@@ -345,5 +345,35 @@
 			right: 20px;
 			top: 20px;
 		}
+
+		.filter-pane{
+			display: none;
+		}
+
+		.jobs-loader{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			z-index: 30;
+
+			.bg-olay{
+				z-index: 20;
+			}
+
+
+			.loader-icon{
+				display: inline-block;
+				vertical-align: top;
+				zoom: 1; /* Fix for IE7 */
+				*display: inline; /* Fix for IE7 */
+				width: 48px;
+				margin-top: 200px;
+				z-index: 30;
+				opacity: 1;
+			}
+		}
 	}
 }

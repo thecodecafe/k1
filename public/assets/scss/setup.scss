@@ -170,6 +170,10 @@ input[type="text"] {
 		&.black{
 			background-color: #000;
 		}
+
+		&.white{
+			background-color: #fff;
+		}
 	}
 
 	img{
@@ -435,6 +439,8 @@ input[type="text"] {
 			background-color: $blue;
 			padding: 0px 0px;
 			}
+
+			@include boxshadow(0px, -10px, 5px, 10px, #000);
 		}
 
 	.nav-bar{
@@ -1039,9 +1045,16 @@ input[type="text"] {
 
 	&.radius{
 		@include borderradius2(3px, 3px, 3px, 3px);
+		overflow: hidden;
 	}
 
 	&.radius2{
 		@include borderradius2(6px, 6px, 6px, 6px);
+		overflow: hidden;
+	}
+
+	&.radius3{
+		@include borderradius2(12px, 12px, 12px, 12px);
+		overflow: hidden;
 	}
 }

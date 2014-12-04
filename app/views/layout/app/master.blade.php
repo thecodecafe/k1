@@ -48,18 +48,7 @@
 	</div>
 <!-- Begin call for javascript files -->
 
-<!-- Vendors -->
-{{HTML::script("assets/foundation-5.4.0/js/vendor/jquery.js")}}
-{{HTML::script("assets/foundation-5.4.0/js/vendor/fastclick.js")}}
-{{HTML::script("assets/foundation-5.4.0/js/vendor/jquery.cookie.js")}}
-{{HTML::script("assets/foundation-5.4.0/js/vendor/modernizr.js")}}
-{{HTML::script("assets/js/app/default.js")}}
-{{HTML::script("assets/js/app/masonry.pkgd.min.js")}}
-
-<!-- Foundation dot JS -->
-{{HTML::script("assets/foundation-5.4.0/js/foundation.min.js")}}
-
-<!-- End call for javascript files -->
+@yield("javascripts")
 
 </body>
 
