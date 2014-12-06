@@ -17,18 +17,5 @@ Route::get('what-we-do', 'siteController@wwd');
 Route::get('login', 'siteController@login');
 Route::get('signup', 'siteController@signup');
 
-
-
-Route::get('search', 'profileController@search');
-Route::get('search', 'profileController@search');
-Route::resource('profile', 'profileController');
+Route::resource('profiles', 'profileController');
 Route::resource('jobs', 'jobsController');
-
-
-// API declarations
-
-Route::group(["prefix" => "api/v1"], function(){
-
-	Route::resource('jobs', 'jobsapiController');
-
-});

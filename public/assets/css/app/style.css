@@ -197,6 +197,10 @@ input[type="text"] {
   height: 100%;
   top: 0px;
   opacity: 0.6; }
+  .bg-olay.darker {
+    opacity: 0.8; }
+  .bg-olay.lighter {
+    opacity: 0.4; }
   .bg-olay.black {
     background-color: #000; }
   .bg-olay.white {
@@ -298,10 +302,48 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     -o-transform: translateY(0) scale(1) translate3d(0, 0, 0);
     -webkit-transform: translateY(0) scale(1) translate3d(0, 0, 0); }
 
-.top-bars .topbar-search-form, .top-bars .topbar-search-form input[type="text"], .top-bars .nav-bar.large.fixed, .top-bars .nav-bar.large .nav-bar-inner ul.menu li ul.submenu > li > a, .top-bars .nav-bar.small .nav-bar-inner ul.menu li, .section.side-padded, .section.less-padding.side-padded, .site-container.user .edit-profile-options .edit-option li, .site-container.user .suggested-connections > ul li, .site-container.user .suggested-connections > ul li .conn-data, .site-container.user .profile-section .ps-list li, .site-container.search .mobile-search-filters, .site-container.search .mobile-search-filters .msf-list-container {
+.top-bars .topbar-search-form, .top-bars .topbar-search-form input[type="text"], .top-bars .nav-bar.large.fixed, .top-bars .nav-bar.large .nav-bar-inner ul.menu li ul.submenu > li > a, .top-bars .nav-bar.small .nav-bar-inner ul.menu li, .section.side-padded, .section.less-padding.side-padded, .site-container.profile .edit-profile-options .edit-option li, .site-container.profile .suggested-connections > ul li, .site-container.profile .suggested-connections > ul li .conn-data, .site-container.profile .profile-section .ps-list li {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+input[type="text"].naked-field, select.naked-field {
+  background: none; }
+  input[type="text"].naked-field.grey, select.naked-field.grey {
+    border: solid 1px #727272;
+    color: #727272; }
+    input[type="text"].naked-field.grey::-webkit-input-placeholder, select.naked-field.grey::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: #727272;
+      opacity: 0.5; }
+    input[type="text"].naked-field.grey:-moz-placeholder, select.naked-field.grey:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #727272;
+      opacity: 0.5; }
+    input[type="text"].naked-field.grey::-moz-placeholder, select.naked-field.grey::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #727272;
+      opacity: 0.5; }
+    input[type="text"].naked-field.grey:-ms-input-placeholder, select.naked-field.grey:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: #727272; }
+  input[type="text"].naked-field.ligth-grey, select.naked-field.ligth-grey {
+    border: solid 1px #a5a5a5;
+    color: #a5a5a5; }
+    input[type="text"].naked-field.ligth-grey::-webkit-input-placeholder, select.naked-field.ligth-grey::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: #a5a5a5; }
+    input[type="text"].naked-field.ligth-grey:-moz-placeholder, select.naked-field.ligth-grey:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #a5a5a5; }
+    input[type="text"].naked-field.ligth-grey::-moz-placeholder, select.naked-field.ligth-grey::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #a5a5a5; }
+    input[type="text"].naked-field.ligth-grey:-ms-input-placeholder, select.naked-field.ligth-grey:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: #a5a5a5; }
+    input[type="text"].naked-field.ligth-grey.no-border, select.naked-field.ligth-grey.no-border {
+      border: none; }
 
 .top-bars {
   position: relative;
@@ -432,6 +474,15 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
             height: 60px;
             font-size: 18px;
             font-weight: bold; }
+            .top-bars .nav-bar.large .nav-bar-inner ul.logo-area li.name img.logo {
+              display: inline-block;
+              vertical-align: top;
+              zoom: 1;
+              /* Fix for IE7 */
+              *display: inline;
+              /* Fix for IE7 */
+              width: 40px;
+              margin-top: 10px; }
         .top-bars .nav-bar.large .nav-bar-inner ul.menu {
           position: relative;
           margin: 0px;
@@ -510,6 +561,10 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
               list-style: none;
               background-color: #fff;
               display: none; }
+              .top-bars .nav-bar.large .nav-bar-inner ul.menu li ul.submenu.grey {
+                background-color: #f2f2f2; }
+              .top-bars .nav-bar.large .nav-bar-inner ul.menu li ul.submenu.fixed-width {
+                width: 200px; }
               .top-bars .nav-bar.large .nav-bar-inner ul.menu li ul.submenu > li {
                 position: relative;
                 float: left;
@@ -569,7 +624,7 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
             cursor: pointer; }
         .top-bars .nav-bar.small .nav-bar-inner .menu-toggler {
           position: absolute;
-          right: 0px;
+          left: 0px;
           top: 0px;
           width: 60px;
           line-height: 60px;
@@ -585,14 +640,13 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
             width: 100%;
             text-align: center;
             cursor: pointer; }
-            .top-bars .nav-bar.small .nav-bar-inner .menu-toggler span img.mobile-menu-loggedin-toggler {
+            .top-bars .nav-bar.small .nav-bar-inner .menu-toggler span a.mobile-menu-loggedin-toggler {
               display: inline-block;
               vertical-align: top;
               zoom: 1;
               *display: inline;
               width: 32px;
-              height: 32px;
-              margin-top: 12px; }
+              height: 32px; }
         .top-bars .nav-bar.small .nav-bar-inner ul.logo-area {
           position: relative;
           float: left;
@@ -615,6 +669,15 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
             font-weight: bold; }
             .top-bars .nav-bar.small .nav-bar-inner ul.logo-area li.name a {
               height: 60px; }
+              .top-bars .nav-bar.small .nav-bar-inner ul.logo-area li.name a img.logo {
+                display: inline-block;
+                vertical-align: top;
+                zoom: 1;
+                /* Fix for IE7 */
+                *display: inline;
+                /* Fix for IE7 */
+                width: 40px;
+                margin-top: 10px; }
         .top-bars .nav-bar.small .nav-bar-inner ul.menu {
           position: relative;
           float: left;
@@ -882,7 +945,7 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
         padding: 0px 20px; }
       .site-container .footer .nav .small a {
         width: 100%; }
-  .site-container.user .profile-bg .profile-bg-olay {
+  .site-container.profile .profile-bg .profile-bg-olay {
     position: absolute;
     float: left;
     width: 100%;
@@ -890,12 +953,12 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     top: 0px;
     background-color: #000;
     opacity: 0.6; }
-  .site-container.user .edit-profile-options {
+  .site-container.profile .edit-profile-options {
     position: absolute;
     left: 20px;
     top: 20px;
     z-index: 10; }
-    .site-container.user .edit-profile-options .edit-option {
+    .site-container.profile .edit-profile-options .edit-option {
       position: absolute;
       top: 100%;
       float: left;
@@ -925,17 +988,17 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
       -o-border-bottom-right-radius: 1px;
       -o-border-top-left-radius: 0px;
       -o-border-top-right-radius: 1px; }
-      .site-container.user .edit-profile-options .edit-option li {
+      .site-container.profile .edit-profile-options .edit-option li {
         position: relative;
         float: left;
         width: 100%;
         padding: 5px 8px;
         font-weight: bold; }
-  .site-container.user .profile-menu {
+  .site-container.profile .profile-menu {
     position: relative;
     margin: 0px;
     list-style: none; }
-    .site-container.user .profile-menu li {
+    .site-container.profile .profile-menu li {
       position: relative;
       float: left;
       border-top: solid 5px #0094e6;
@@ -944,11 +1007,11 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
       -ms-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease; }
-      .site-container.user .profile-menu li:hover {
+      .site-container.profile .profile-menu li:hover {
         border-top: solid 5px #7fb423; }
-      .site-container.user .profile-menu li.active {
+      .site-container.profile .profile-menu li.active {
         border-top: solid 5px #7fb423; }
-      .site-container.user .profile-menu li a {
+      .site-container.profile .profile-menu li a {
         display: inline-block;
         vertical-align: top;
         zoom: 1;
@@ -958,25 +1021,73 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
         padding: 12px 18px;
         color: #8c8c8c;
         font-weight: 400; }
-  .site-container.user .main-profile-pic {
-    border: solid 5px #e5e5e5;
+  .site-container.profile .main-profile-pic {
+    -webkit-box-shadow: 0px 0px 15px -2px #000;
+    -moz-box-shadow: 0px 0px 15px -2px #000;
+    -ms-box-shadow: 0px 0px 15px -2px #000;
+    -o-box-shadow: 0px 0px 15px -2px #000;
+    box-shadow: 0px 0px 15px -2px #000;
     width: 200px; }
-  .site-container.user .suggested-connections > ul {
+  .site-container.profile .profiles-filter-pane {
+    display: none; }
+    .site-container.profile .profiles-filter-pane .close-filter {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center; }
+  .site-container.profile .profiles-loader {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 30; }
+    .site-container.profile .profiles-loader .bg-olay {
+      z-index: 20; }
+    .site-container.profile .profiles-loader .loader-icon {
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      /* Fix for IE7 */
+      *display: inline;
+      /* Fix for IE7 */
+      width: 48px;
+      margin-top: 200px;
+      z-index: 30;
+      opacity: 1; }
+  .site-container.profile .profiles-container .profiles-image-container {
+    position: relative;
+    float: left;
+    width: 100%; }
+    .site-container.profile .profiles-container .profiles-image-container img {
+      width: 40%;
+      -webkit-box-shadow: 0px 0px 15px -2px #000;
+      -moz-box-shadow: 0px 0px 15px -2px #000;
+      -ms-box-shadow: 0px 0px 15px -2px #000;
+      -o-box-shadow: 0px 0px 15px -2px #000;
+      box-shadow: 0px 0px 15px -2px #000; }
+  .site-container.profile .profiles-container .item:hover {
+    opacity: 0.9; }
+  .site-container.profile .suggested-connections > ul {
     position: relative;
     float: left;
     width: 100%;
     margin: 0px 0px;
     list-style: none; }
-    .site-container.user .suggested-connections > ul li:last-child {
+    .site-container.profile .suggested-connections > ul li:last-child {
       border-bottom: none; }
-    .site-container.user .suggested-connections > ul li {
+    .site-container.profile .suggested-connections > ul li {
       position: relative;
       float: left;
       width: 100%;
       margin: 0px 0px;
       padding: 10px 12px;
       border-bottom: solid 1px #f2f2f2; }
-      .site-container.user .suggested-connections > ul li .conn-cancel {
+      .site-container.profile .suggested-connections > ul li .conn-cancel {
         position: absolute;
         right: 12px;
         top: 10px;
@@ -1000,36 +1111,36 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
         -o-transition: all 500ms ease;
         transition: all 500ms ease;
         z-index: 20; }
-        .site-container.user .suggested-connections > ul li .conn-cancel:hover {
+        .site-container.profile .suggested-connections > ul li .conn-cancel:hover {
           opacity: 1; }
-      .site-container.user .suggested-connections > ul li .conn-image {
+      .site-container.profile .suggested-connections > ul li .conn-image {
         position: relative;
         float: left;
         width: 30%; }
-      .site-container.user .suggested-connections > ul li .conn-data {
+      .site-container.profile .suggested-connections > ul li .conn-data {
         position: relative;
         float: left;
         width: 70%;
         padding-left: 10px; }
-      .site-container.user .suggested-connections > ul li .conn-button {
+      .site-container.profile .suggested-connections > ul li .conn-button {
         position: relative;
         float: left;
         width: 100%; }
-  .site-container.user .profile-section .add-button {
+  .site-container.profile .profile-section .add-button {
     position: absolute;
     right: 0px;
     top: -20px; }
-  .site-container.user .profile-section .ps-list li {
+  .site-container.profile .profile-section .ps-list li {
     position: relative;
     float: left;
     width: 100%;
     padding: 10px 14px; }
-    .site-container.user .profile-section .ps-list li .ps-actions {
+    .site-container.profile .profile-section .ps-list li .ps-actions {
       position: absolute;
       right: 0px;
       top: 0px;
       display: none; }
-      .site-container.user .profile-section .ps-list li .ps-actions a {
+      .site-container.profile .profile-section .ps-list li .ps-actions a {
         display: inline-block;
         vertical-align: top;
         zoom: 1;
@@ -1038,13 +1149,13 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
         /* Fix for IE7 */
         width: 24px;
         height: 24px; }
-    .site-container.user .profile-section .ps-list li:hover {
+    .site-container.profile .profile-section .ps-list li:hover {
       background-color: #f7f7f7; }
-      .site-container.user .profile-section .ps-list li:hover .ps-actions {
+      .site-container.profile .profile-section .ps-list li:hover .ps-actions {
         display: block; }
-  .site-container.user .profile-contacts {
+  .site-container.profile .profile-contacts {
     text-align: center; }
-    .site-container.user .profile-contacts .contact-link {
+    .site-container.profile .profile-contacts .contact-link {
       display: inline-block;
       vertical-align: top;
       zoom: 1;
@@ -1070,56 +1181,9 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
       -ms-transition: all 500ms ease;
       -o-transition: all 500ms ease;
       transition: all 500ms ease; }
-      .site-container.user .profile-contacts .contact-link:hover {
+      .site-container.profile .profile-contacts .contact-link:hover {
         border: solid 1px #00a4ff;
         color: #00a4ff; }
-  .site-container.search .mobile-search-filters {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 20px; }
-    .site-container.search .mobile-search-filters .msf-trigger {
-      display: inline-block;
-      vertical-align: top;
-      zoom: 1;
-      /* Fix for IE7 */
-      *display: inline;
-      /* Fix for IE7 */
-      font-size: 1.5em;
-      color: #8c8c8c; }
-    .site-container.search .mobile-search-filters .msf-trigger2 {
-      display: inline-block;
-      vertical-align: top;
-      zoom: 1;
-      /* Fix for IE7 */
-      *display: inline;
-      /* Fix for IE7 */
-      font-size: 1.5em;
-      color: #8c8c8c; }
-    .site-container.search .mobile-search-filters .msf-list-container {
-      position: fixed;
-      float: left;
-      left: -100%;
-      opacity: 0;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-      padding: 60px 20px 20px 20px;
-      background-color: #fff;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      z-index: 20;
-      -webkit-transition: all 400ms ease-in-out;
-      -moz-transition: all 400ms ease-in-out;
-      -ms-transition: all 400ms ease-in-out;
-      -o-transition: all 400ms ease-in-out;
-      transition: all 400ms ease-in-out; }
-      .site-container.search .mobile-search-filters .msf-list-container.active {
-        left: 0px;
-        opacity: 1; }
   .site-container.jobs img.corporation_image {
     display: inline-block;
     vertical-align: top;
@@ -1129,6 +1193,8 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     /* Fix for IE7 */
     border: solid 3px #e5e5e5;
     width: 64px; }
+  .site-container.jobs .jobs-container .item:hover {
+    opacity: 0.8; }
   .site-container.jobs .corporation-background-photo {
     background-size: cover; }
   .site-container.jobs .apply-button {
@@ -1137,6 +1203,14 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
     top: 20px; }
   .site-container.jobs .filter-pane {
     display: none; }
+    .site-container.jobs .filter-pane .close-filter {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center; }
   .site-container.jobs .jobs-loader {
     position: absolute;
     left: 0px;

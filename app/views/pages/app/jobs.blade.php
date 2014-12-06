@@ -15,9 +15,24 @@
 		$certificates = ["Unchanged", "High School (S.S.C.E)", "Vocational","Bachelor Of Engineering (B.Eng)", "Bachelor Of Science (B.Sc)", "Master of Business Administration (MBA)", "Master Of Science (M.Sc)", "OND", "HND", "NCE", "Diploma"]
 
 	 ?>
-	 <div class="no-padding section margintop3 marginbottom3">
-	 	 <a href="#" class="white button marginbottom0 search-filter-button"><i class="fa fa-filter"></i>&nbsp;Filter Jobs</a>
-	 </div>
+	<div class="no-padding section margintop2 marginbottom2">
+	 	
+	 	 <div class="row">
+
+	 	 	<div class="large-2 medium-3 small-12 columns show-for-medium-up">
+	 	 		<a href="#" class="white small button marginbottom0 jobs-filter-button"><i class="fa fa-filter"></i>&nbsp;Filter Jobs</a>
+	 	 	</div>
+
+	 	 	<div class="large-10 medium-9 small-12 columns">
+	 	 		<input type="text" placeholder="Search Job here..." class="marginbottom0 naked-field ligth-grey no-border">
+	 	 	</div>
+
+	 	 </div>
+	</div>
+	
+	<div class="no-padding section show-for-small-only">
+		<a href="#" class="secondary button marginbottom0 jobs-filter-button"><i class="fa fa-filter"></i>&nbsp;Filter Jobs</a>
+	</div>
 	
 	<div class="dark section filter-pane">
 		
@@ -87,6 +102,8 @@
 		</div>
 
 	</div>
+
+	<a href="#" class="close-filter grey-text only s-text"><i class="fa fa-long-arrow-up"></i></a>
 		
 </div>
 
@@ -111,7 +128,7 @@
 
 		
 
-	<div class=" less-padding grey section fly-in-plugin" id="js-masonry-container">
+	<div class=" less-padding grey section fly-in-plugin jobs-container" id="js-masonry-container">
 
 		<div class="jobs-loader">
 			<div class="black bg-olay"><img src="{{URL::to('/')}}/assets/img/app/7122.gif" class="loader-icon"></div>

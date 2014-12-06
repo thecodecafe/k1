@@ -130,12 +130,14 @@ var k1app = new function(){
 
 		show_hide_jobs_filter();
 
+		show_hide_profiles_filter();
+
 
 	};
 
 	var profile_edit_options_toggle = function()
 	{
-		if ($("div").hasClass('user') && $('div').hasClass('edit-profile-options')) {
+		if ($("div").hasClass('profile') && $('div').hasClass('edit-profile-options')) {
 
 			$('.togglebutton').click(function(event) {
 				
@@ -154,16 +156,16 @@ var k1app = new function(){
 
 	var mobile_menu_toggle = function(){
 
-		$(".nav-bar.small .menu-toggler span").on("click", function(event) {
+		$(".nav-bar.small .menu-toggler a").on("click", function(event) {
 
-			$(this).off("click");
+			//$(this).off("click");
 
 			if ($(".nav-bar.small ul.menu").is(":visible")) {
 
 
 				$(".nav-bar.small ul.menu").slideUp('50', function(){
 
-					mobile_menu_toggle();
+					//mobile_menu_toggle();
 				});			
 
 			}
@@ -171,7 +173,7 @@ var k1app = new function(){
 
 				$(".nav-bar.small ul.menu").slideDown('50', function(){
 
-					mobile_menu_toggle();
+					//mobile_menu_toggle();
 				});
 			}
 
@@ -229,13 +231,14 @@ var k1app = new function(){
 			});
 	}
 
-	var show_hide_jobs_filter = function(){
+	var show_hide_profiles_filter = function(){
 
-		if ($("div").hasClass("jobs") && $("a").hasClass("search-filter-button")) {
+		if ($("div").hasClass("profile") && $("a").hasClass("profiles-filter-button")) {
 
 
-			var button = $("a.search-filter-button"),
-				filter_pane = $(".jobs .filter-pane");
+			var button = $("a.profiles-filter-button"),
+				filter_pane = $(".profile .profiles-filter-pane");
+				filter_pane_close = $(".profile .profiles-filter-pane .close-filter");
 
 				button.click(function(event){
 
@@ -248,14 +251,69 @@ var k1app = new function(){
 
 						filter_pane.slideDown("fast");
 
-						filter_pane.one("mouseleave", function(event){
+						// filter_pane.one("mouseleave", function(event){
 
-							filter_pane.delay(500).slideUp("fast");
+						// 	filter_pane.delay(500).slideUp("fast");
 
-							event.preventDefault();
-						});
+						// 	event.preventDefault();
+						// });
 
 					}
+
+					event.preventDefault();
+
+				});
+
+				filter_pane_close.click(function(event){
+
+					filter_pane.slideUp("fast");
+
+					event.preventDefault();
+
+				});
+
+				$(".profiles-loader").delay(1000).fadeOut("fast");
+
+		}
+	}
+
+	var show_hide_jobs_filter = function(){
+
+		if ($("div").hasClass("jobs") && $("a").hasClass("jobs-filter-button")) {
+
+
+			var button = $("a.jobs-filter-button"),
+				filter_pane = $(".jobs .filter-pane"),
+				filter_pane_close = $(".jobs .filter_pane .close-filter");
+
+				button.click(function(event){
+
+					if (filter_pane.is(":visible")) {
+
+						filter_pane.slideUp("fast");
+
+					}
+					else{
+
+						filter_pane.slideDown("fast");
+
+						// filter_pane.one("mouseleave", function(event){
+
+						// 	filter_pane.delay(500).slideUp("fast");
+
+						// 	event.preventDefault();
+						// });
+
+					}
+
+					event.preventDefault();
+
+				});
+
+
+				filter_pane_close.click(function(event){
+
+					filter_pane.slideUp("fast");
 
 					event.preventDefault();
 

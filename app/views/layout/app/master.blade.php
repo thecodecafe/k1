@@ -21,8 +21,6 @@
 	<div class="site-container @yield('current_page')">
 		
 		<div class="top-bars">
-
-			@include("_partials.app.searchbar")
 			@include("_partials.app.menubar")
 			@include("_partials.app.mobile_menubar")
 

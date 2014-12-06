@@ -167,6 +167,14 @@ input[type="text"] {
 		top: 0px;
 		opacity: 0.6;
 
+		&.darker{
+			opacity:0.8;
+		}
+
+		&.lighter{
+			opacity:0.4;
+		}
+
 		&.black{
 			background-color: #000;
 		}
@@ -393,6 +401,61 @@ input[type="text"] {
 	     -o-text-shadow: $x $y $blur $color;
 	        text-shadow: $x $y $blur $color;
 }
+
+input[type="text"], select
+{
+
+	&.naked-field{
+		background:none;
+
+		&.grey{
+			border:solid 1px darken($grey, 50%);
+			color:darken($grey, 50%);
+				&::-webkit-input-placeholder { /* WebKit browsers */
+			    color:darken($grey, 50%);
+			    opacity:0.5;
+			}
+				&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			   color:darken($grey, 50%);
+			   opacity:0.5;
+			}
+				&::-moz-placeholder { /* Mozilla Firefox 19+ */
+			   color:darken($grey, 50%);
+			   opacity:0.5;
+			}
+				&:-ms-input-placeholder { /* Internet Explorer 10+ */
+			   color:darken($grey, 50%);
+			}
+
+		}
+
+		&.ligth-grey{
+
+			border:solid 1px darken($grey, 30%);
+			color:darken($grey, 30%);
+				&::-webkit-input-placeholder { /* WebKit browsers */
+			    color:darken($grey, 30%);
+			}
+				&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			   color:darken($grey, 30%);
+			}
+				&::-moz-placeholder { /* Mozilla Firefox 19+ */
+			   color:darken($grey, 30%);
+			}
+				&:-ms-input-placeholder { /* Internet Explorer 10+ */
+			   color:darken($grey, 30%);
+			}
+
+			&.no-border{
+
+				border:none;
+
+			}
+		}
+
+	}
+	
+}
 .top-bars{
 	position: relative;
 	float: left;
@@ -476,6 +539,7 @@ input[type="text"] {
 
 						a{
 							color: $blue;
+
 						}
 					}
 				}
@@ -575,6 +639,15 @@ input[type="text"] {
 						height: 60px;
 						font-size: 18px;
 						font-weight: bold;
+
+						img.logo{
+							display: inline-block;
+							vertical-align: top;
+							zoom: 1; /* Fix for IE7 */
+							*display: inline; /* Fix for IE7 */
+							width: 40px;
+							margin-top: 10px;
+						}
 					}
 				}
 
@@ -660,6 +733,14 @@ input[type="text"] {
 							background-color: #fff;
 							display: none;
 
+							&.grey{
+								background-color:$grey;
+							}
+
+							&.fixed-width{
+								width: 200px;
+							}
+
 							>li{
 								position: relative;
 								float: left;
@@ -741,7 +822,7 @@ input[type="text"] {
 
 				.menu-toggler{
 					position: absolute;
-					right: 0px;
+					left: 0px;
 					top: 0px;
 					width:60px;
 					line-height: 60px;
@@ -757,14 +838,13 @@ input[type="text"] {
 						text-align: center;
 						cursor: pointer;
 
-						img.mobile-menu-loggedin-toggler{
+						a.mobile-menu-loggedin-toggler{
 							display: inline-block;
 							vertical-align: top;
 							zoom: 1;
 							*display: inline;
 							width:32px;
-							height: 32px; 
-							margin-top:12px;
+							height: 32px;
 
 						}
 					}
@@ -792,6 +872,15 @@ input[type="text"] {
 
 						a{
 							height: 60px;
+
+							img.logo{
+								display: inline-block;
+								vertical-align: top;
+								zoom: 1; /* Fix for IE7 */
+								*display: inline; /* Fix for IE7 */
+								width: 40px;
+								margin-top: 10px;
+							}
 						}
 					}
 				}

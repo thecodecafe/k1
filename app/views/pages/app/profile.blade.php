@@ -2,7 +2,7 @@
 
 @section('menu_style')  @stop
 
-@section('current_page') user @stop
+@section('current_page') profile @stop
 
 @section('user_tab') user_profile @stop
 
@@ -14,7 +14,7 @@
 
 		<div class="large-12 medium-12 small-12 columns">
 
-			<div class="grey section profile-bg" style="background:url({{URL::to('assets/img/app/test/profile-bg.jpg')}}) center center no-repeat; background-size: cover;">
+			<div class="grey section profile-bg" style="background:url({{URL::to('/assets/img/app/test/bgs/4.jpg')}}) center center no-repeat; background-size: cover;">
 
 				<div class="profile-bg-olay">&nbsp;</div>
 
@@ -35,10 +35,10 @@
 						<div class="row fly-in-plugin">
 							<div class="large-12 medium-12 small-12 columns margintop1 ffl">
 								<p class="text-center marginbottom1">
-									<img src="{{URL::to("/")}}/assets/img/app/test/people/10.jpg" class="round main-profile-pic">
+									<img src="{{URL::to("/")}}/assets/img/app/test/people/12.jpg" class="round main-profile-pic">
 								</p>
 								<p class="text-center bold s-text white-text marginbottom0">
-									Daniella Barde
+									Microsoft
 								</p>
 								<p class="text-center xl-text blue-text marginbottom0">
 									2.4K
