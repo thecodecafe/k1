@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -121,7 +121,11 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+		'Cartalyst\Sentry\SentryServiceProvider',
+		'Devfactory\Captcha\CaptchaServiceProvider',
+		'K1\Admin\AdminServiceProvider',
+		'K1\Api\ApiServiceProvider',
+		'K1\Data\DataServiceProvider',
 	),
 
 	/*
@@ -188,7 +192,8 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-
+		'Sentry' 		 	=> 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Captcha' 		 	=> 'Devfactory\Captcha\Facades\Captcha',
 	),
 
 );

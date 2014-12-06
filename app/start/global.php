@@ -15,6 +15,7 @@ ClassLoader::addDirectories(array(
 
 	app_path().'/commands',
 	app_path().'/controllers',
+	app_path().'/listeners',
 	app_path().'/models',
 	app_path().'/database/seeds',
 
@@ -51,6 +52,10 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
 });
 
+App::error(function(K1\Data\Repositories\WrongProfileException $exception, $code) {
+	return Response::json(array('status'=>"error", 'message'=> $exception->getMessage()), 200);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler
@@ -81,3 +86,4 @@ App::down(function()
 require app_path().'/filters.php';
 require app_path().'/handlers.php';
 require app_path().'/helpers.php';
+require app_path().'/errors.php';

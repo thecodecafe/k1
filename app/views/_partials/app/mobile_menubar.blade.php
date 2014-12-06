@@ -3,7 +3,7 @@
 
 		<ul class="logo-area">
 			<li class="name">
-				<span><a href="{{URL::to('')}}"><img src="{{URL::to("/assets/img/logo.png")}}" class="logo"></a></span>
+				<span><a href="{{URL::to('')}}"><img src="{{URL::to("assets/img/logo.png")}}" class="logo"></a></span>
 			</li>
 		</ul>
 

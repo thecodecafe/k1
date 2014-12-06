@@ -1,0 +1,66 @@
+<form name="corporateForm" class="form-horizontal">
+<div class="row">
+	<div class="col-lg-6 col-md-6">
+		<div class="form-group">
+			<div class="col-lg-4 col-md-4 control-label">Name</div>
+			<div class="col-lg-8 col-md-8">
+				<input class="form-control" ng-model="user.name" placeholder="Company/Firm name">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-4 col-md-4 control-label">Industy</div>
+			<div class="col-lg-8 col-md-8">
+				<ui-select ng-model="industries.selected" theme="bootstrap" reset-search-input="false">
+            		<ui-select-match placeholder="Select an industry">{{$select.selected.name}}</ui-select-match>
+            		<ui-select-choices repeat="industry in industries | filter: $select.search" refresh-delay="0">
+              			<div ng-bind-html="industry.name | highlight: $select.search"></div>
+            		</ui-select-choices>
+          		</ui-select>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-4 col-md-4 control-label">Description</div>
+			<div class="col-lg-8 col-md-8">
+				<textarea class="form-control" ng-model="user.corporateprofile.desc" placeholder="Description of the company" rows="4"></textarea>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6 col-md-6">
+		<div class="form-group">
+			<div class="col-lg-4 col-md-4 control-label">Email</div>
+			<div class="col-lg-8 col-md-8">
+				<input class="form-control" ng-model="user.email" placeholder="Email address">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-4 col-md-4 control-label">Phone</div>
+			<div class="col-lg-8 col-md-8">
+				<input class="form-control" ng-model="user.corporateprofile.phone" placeholder="Contact phone">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-4 col-md-4 control-label">Street Address</div>
+			<div class="col-lg-8 col-md-8">
+				<input class="form-control" ng-model="user.corporateprofile.street" placeholder="Street Address (2 Bode Thomas)">
+			</div>
+		</div>
+
+		 <div class="form-group">
+	      	<div class="col-lg-4 col-md-4 control-label">City: </div>
+	      	<div class="col-lg-8 col-md-8">
+		        <ui-select ng-model="cities.selected" theme="bootstrap" reset-search-input="false">
+		          <ui-select-match placeholder="Select a city">{{$select.selected.name}}</ui-select-match>
+		          <ui-select-choices repeat="city in cities | filter: $select.search" refresh-delay="0">
+		            <div ng-bind-html="city.name | highlight: $select.search"></div>
+		          </ui-select-choices>
+		        </ui-select>
+	      	</div> 
+	    </div>
+	</div>
+</div>
+</form>

@@ -1,0 +1,166 @@
+<form name="individualForm" class="form-horizontal">
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+    	<div class="row">
+    		<div class="col-lg-7 col-md-12">
+    				<div class="photo-preview bg-light" ng-show="uploader.isHTML5" ng-thumb="{ file: uploader.queue[0]._file, height: 200 }"></div>				
+    				<div class="wrapper-xs">
+    					<input type="file" nv-file-select="" uploader="uploader" class="btn btn-sm btn-default">
+    				</div>
+    		</div>
+
+    		<div class="col-lg-5 col-md-12">
+    		  <button class="btn btn-info btn-sm" ng-click="uploader.queue[0].upload()">Upload</button>
+    			<button class="btn btn-danger btn-sm">Remove</button>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 b-l">
+    	<div class="form-group">
+    		<div class="col-lg-4 col-md-4 control-label">First Name*: </div>
+    		<div class="col-lg-8 col-md-8">
+    			<input type="text" name="first_name" class="form-control" placeholder="User's first name" ng-model="user.first_name">
+    		</div>
+    	</div>
+
+    	<div class="form-group">
+    		<div class="col-lg-4 col-md-4 control-label">Middle Name: </div>
+    		<div class="col-lg-8 col-md-8">
+    			<input type="text" name="middle_name" class="form-control" placeholder="User's middle name" ng-model="user.middle_name">
+    		</div>
+    	</div>
+
+    	<div class="form-group">
+    		<div class="col-lg-4 col-md-4 control-label">Last Name*: </div>
+    		<div class="col-lg-8 col-md-8">
+    			<input type="text" name="last_name" class="form-control" placeholder="User's last name" ng-model="user.last_name">
+    		</div>
+    	</div>
+
+    	<div class="form-group">
+    		<div class="col-lg-4 col-md-4 control-label">Gender*: </div>
+    		<div class="col-lg-8 col-md-8">
+    			<ui-select ng-model="sex.selected" theme="bootstrap" reset-search-input="false">
+            <ui-select-match placeholder="Select gender">{{$select.selected.name}}</ui-select-match>
+            <ui-select-choices repeat="gender in genders | filter: $select.search" refresh-delay="0">
+              <div ng-bind-html="gender.name | highlight: $select.search"></div>
+            </ui-select-choices>
+          </ui-select>
+    		</div>
+    	</div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6">
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">Date of birth*:</div>
+      <div class="col-lg-8 col-md-8">
+        <p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="user.profile.dob" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open($event)">
+            <i class="glyphicon glyphicon-calendar"></i>
+            </button>
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">Marital Status: </div>
+      <div class="col-lg-8 col-md-8">
+        <ui-select ng-model="status.selected" theme="bootstrap" reset-search-input="false">
+          <ui-select-match placeholder="Select status">{{$select.selected.name}}</ui-select-match>
+          <ui-select-choices repeat="status in statuses | filter: $select.search" refresh-delay="0">
+            <div ng-bind-html="status.name | highlight: $select.search"></div>
+          </ui-select-choices>
+        </ui-select>
+      </div> 
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">State Of Origin: </div>
+      <div class="col-lg-8 col-md-8">
+        <ui-select ng-model="states.selected" theme="bootstrap" reset-search-input="false" on-select="fetchLgas($item, $model)">
+          <ui-select-match placeholder="Select state">{{$select.selected.name}}</ui-select-match>
+          <ui-select-choices repeat="state in states | filter: $select.search" refresh-delay="0">
+            <div ng-bind-html="state.name | highlight: $select.search"></div>
+          </ui-select-choices>
+        </ui-select>
+      </div> 
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">LGA: </div>
+      <div class="col-lg-8 col-md-8">
+        <ui-select ng-model="lgas.selected" theme="bootstrap" reset-search-input="false">
+          <ui-select-match placeholder="{{ lgaplaceholder }}">{{$select.selected.name}}</ui-select-match>
+          <ui-select-choices repeat="lga in lgas | filter: $select.search" refresh-delay="0">
+            <div ng-bind-html="lga.name | highlight: $select.search"></div>
+          </ui-select-choices>
+        </ui-select>
+      </div> 
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-6 b-l">
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">Email*: </div>
+      <div class="col-lg-8 col-md-8">
+        <input class="form-control" name="email" type="text" placeholder="Email Address" ng-model="user.email">
+      </div> 
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">Phone No: </div>
+      <div class="col-lg-8 col-md-8">
+        <input class="form-control" name="email" type="text" placeholder="Phone Number" ng-model="user.profile.phone">
+      </div> 
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">Street Address: </div>
+      <div class="col-lg-8 col-md-8">
+        <textarea class="form-control" name="street" placeholder="Address" ng-model="user.profile.street" rows="3"></textarea>
+      </div> 
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">City: </div>
+      <div class="col-lg-8 col-md-8">
+        <ui-select ng-model="cities.selected" theme="bootstrap" reset-search-input="false">
+          <ui-select-match placeholder="Select a city">{{$select.selected.name}}</ui-select-match>
+          <ui-select-choices repeat="city in cities | filter: $select.search" refresh-delay="0">
+            <div ng-bind-html="city.name | highlight: $select.search"></div>
+          </ui-select-choices>
+        </ui-select>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<div class="row" ng-show="showSchool">
+  <div class="col-lg-6 col-md-6">
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">School</div>
+      <div class="col-lg-8 col-md-8">
+        <ui-select ng-model="schools.selected" theme="bootstrap" reset-search-input="false">
+          <ui-select-match placeholder="{{ schoolplaceholder }}">{{$select.selected.name}}</ui-select-match>
+          <ui-select-choices repeat="school in schools | filter: $select.search" refresh-delay="0">
+            <div ng-bind-html="school.name | highlight: $select.search"></div>
+          </ui-select-choices>
+        </ui-select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-4 col-md-4 control-label">Course</div>
+      <div class="col-lg-8 col-md-8">
+        <input class="form-control" ng-model="user.profile.course" placholder="Enter course of study">
+      </div>
+    </div>
+  </div>
+</div>
+</form>

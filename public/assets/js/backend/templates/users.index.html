@@ -1,0 +1,63 @@
+<div ng-controller="UserListCtrl">
+	<!-- toaster directive -->
+	<toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
+	<!-- / toaster directive -->
+	<!-- header -->
+	<div class="row-row">
+	 	<div class="col-sm-6 wrapper bg-light lter b-b">
+		 	<div class="input-group m-b-xxs">
+		        <span class="input-group-addon input-sm no-border no-bg"><i class="icon-magnifier text-md m-t-xxs"></i></span>
+		        <input type="text" class="form-control input-sm no-border no-bg text-md" placeholder="Search" ng-model="query">
+		    </div>
+		</div>
+
+		<div class="col-sm-6 wrapper bg-light lter b-b" style="padding: 15.5px !important;">
+			<div class="btn-toolbar">
+		      	<div class="btn-group dropdown">
+		       		<button class="btn btn-default btn-sm btn-bg dropdown-toggle" data-toggle="dropdown">
+		          		<span class="dropdown-label">Sort By : {{activeSort}}</span>                    
+		          		<span class="caret"></span>
+		        	</button>
+		        	<ul class="dropdown-menu text-left text-sm">
+		          		<li ng-repeat="sort in sortFields"><a ng-click="sortBy(sort.field)">{{sort.name}}</a></li>
+		        	</ul>
+		      	</div>
+		    </div>
+		</div>
+	</div>
+  	<!-- / header -->
+
+  	<div class="vbox">
+  		<div class="row-row">
+  			<div class="m-t">
+	  			<div class="col-sm-4" ng-repeat="user in users | filter:query">
+	  				<div class="panel panel-default">
+	  					<div class="panel-heading">
+	  						<div class="clearfix">
+							    <a href class="pull-left thumb-md avatar b-3x m-r"><img src="assets/img/backend/a0.jpg" alt="..."></a>
+							    <div class="clear">
+							        <div class="h5 m-t-xs m-b-xs" ng-if='user.type == 1'>
+							            {{user.first_name}} {{user.last_name}}
+							            <i class="fa fa-circle text-success pull-right text-xs m-t-sm" ng-show="{{user.activated}}"></i>
+							        </div>
+							        <div class="h5 m-t-xs m-b-xs" ng-if='user.type == 2'>
+							           {{user.name}}
+							            <i class="fa fa-circle text-success pull-right text-xs m-t-sm" ng-show="{{user.activated}}"></i>
+							        </div>
+							        <div class="btn-toolbar m-t">
+								      	<div class="btn-group">
+								       		<button class="btn btn-default btn-sm btn-bg" type="button" tooltip-placement="right" tooltip="View" ui-sref="app.users.user({user:user.id})"><i class="icon icon-eye"></i></button>
+								       		<button class="btn btn-default btn-sm btn-bg" type="button" tooltip-placement="top" tooltip="Edit" ui-sref="app.users.edit({user:user.id})"><i class="icon icon-pencil"></i></button>
+								       		<button class="btn btn-default btn-sm btn-bg" type="button" tooltip-placement="top" tooltip="Delete" ng-click="delete(user)"><i class="icon icon-trash"></i></button>
+								      	</div>
+								    </div>
+							    </div>
+							</div>
+	  				    </div>
+	  				</div>
+	  			</div>
+	  			<div class="text-center pos-abt w-full" style="top:50%;" ng-show='statusShow'>{{ statusText }}</div>
+	  		</div>
+  		</div>
+  	</div>
+</div>

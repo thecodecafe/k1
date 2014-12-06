@@ -54,6 +54,11 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
+Route::filter('admin-auth', function()
+{
+	if (!Sentry::check()) return Redirect::to('admin/login');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Guest Filter
